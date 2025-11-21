@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mines Helper — инструмент для игры Mines</title>
+  <title>Mines Helper — подсказки в игре Mines в реальном времени</title>
 
   <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ59P95EE7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YJ59P95EE7');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ59P95EE7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YJ59P95EE7');
+  </script>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -39,18 +39,123 @@
   </header>
 
   <main class="main">
+    <!-- HERO: первый экран -->
     <section class="hero container">
-      <h1>Инструмент для анализа игры Mines</h1>
-      <p>
-        Этот сайт — база: здесь будет описание игры, работа бота и шаги
-        по использованию. Сейчас мы настраиваем структуру и мобильное меню.
+      <p class="hero__label">Инструмент подсказок для Mines</p>
+      <h1>Подсказки, куда кликать в игре Mines — в реальном времени</h1>
+      <p class="hero__subtitle">
+        Инструмент помогает выбирать безопасные клетки и снижает хаотичные клики.
+        Не гарантирует прибыль, но даёт структуру и больше контроля над игрой.
       </p>
-      <a href="#cta" class="btn">Запустить бота</a>
+
+      <div class="hero__actions">
+        <a href="#cta" class="btn">Запустить бота в Telegram</a>
+        <p class="hero__note">Работает на телефоне и в браузере · Без доступа к аккаунту</p>
+      </div>
     </section>
 
-    <section class="container" id="cta">
-      <h2>Дальше сюда добавим наш основной оффер</h2>
-      <p>Позже сюда поставим блок с кнопкой перехода в бота.</p>
+    <!-- Блок: Как это работает -->
+    <section class="section container">
+      <h2 class="section__title">Как работает инструмент</h2>
+      <div class="steps">
+        <article class="step-card">
+          <h3>1. Открываешь игру Mines</h3>
+          <p>Запускаешь игру на той платформе, где играешь обычно. Поддержка мобильных устройств.</p>
+        </article>
+        <article class="step-card">
+          <h3>2. Включаешь нашего бота</h3>
+          <p>Запускаешь бота в Telegram и следуешь простой инструкции по связке с игрой.</p>
+        </article>
+        <article class="step-card">
+          <h3>3. Получаешь сигналы в реальном времени</h3>
+          <p>Бот показывает подсказки, куда кликать. Ты принимаешь решение, не играя вслепую.</p>
+        </article>
+        <article class="step-card">
+          <h3>4. Играешь осознаннее</h3>
+          <p>Инструмент не обещает выигрыши, но уменьшает хаос и помогает играть по системе.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Блок: Зачем он нужен -->
+    <section class="section section--alt container">
+      <h2 class="section__title">Чем полезен Mines Helper</h2>
+      <div class="features">
+        <article class="feature-card">
+          <h3 class="feature-card__title">Меньше рандомных кликов</h3>
+          <p>Большинство игроков тыкают наугад. Подсказки помогают структурировать игру и не “кликать от балды”.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">Подходит новичкам</h3>
+          <p>Не нужно разбираться в сложных стратегиях. Следуешь шагам и смотришь на сигналы бота.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">Сигналы в реальном времени</h3>
+          <p>Подсказки обновляются по ходу игры. Ты видишь, куда бот предлагает кликать прямо сейчас.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-card__title">Работает на телефоне</h3>
+          <p>Игру и бота можно держать рядом: игра в одном окне, подсказки — в другом.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Блок CTA c повтором оффера -->
+    <section class="section container" id="cta">
+      <div class="cta-card">
+        <h2>Готов протестировать подсказки в Mines?</h2>
+        <p>
+          Запусти бота, следуй инструкциям и оцени, насколько легче играть, когда есть структура.
+        </p>
+        <a href="#" class="btn">Запустить бота в Telegram</a>
+        <p class="cta-card__note">
+          Мы не обещаем доход. Инструмент помогает принимать решения, но риск игры остаётся.
+        </p>
+      </div>
+    </section>
+
+    <!-- Блок FAQ -->
+    <section class="section section--alt container">
+      <h2 class="section__title">Частые вопросы</h2>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>Гарантирует ли инструмент выигрыш?</summary>
+          <p>
+            Нет. Это не “чудо-бот” и не гарантия дохода. Это подсказчик, который уменьшает хаос
+            и помогает принимать решения, но риск игры остаётся всегда.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Сложно ли пользоваться ботом?</summary>
+          <p>
+            Нет. В инструкции по шагам показано: как открыть игру, как запустить бота и как считывать подсказки.
+            Даже новичок разберётся за пару минут.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>На каких устройствах это работает?</summary>
+          <p>
+            Инструмент рассчитан прежде всего на мобильные устройства, но отлично работает и на компьютере.
+            Достаточно браузера и Telegram.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Нужен ли депозит или какие-то данные от аккаунта?</summary>
+          <p>
+            Нет. Мы не просим логины, пароли или платёжные данные. Ты играешь на своей стороне, бот — на своей.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Почему вы не пишете конкретные проценты или доход?</summary>
+          <p>
+            Потому что это было бы обманом. Игры всегда связаны с риском. Мы даём инструмент, а не обещание.
+          </p>
+        </details>
+      </div>
     </section>
   </main>
 
