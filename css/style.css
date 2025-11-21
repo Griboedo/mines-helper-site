@@ -666,3 +666,104 @@ img {
     margin-right: 0;
   }
 }
+
+/* ====== Слайдер отзывов ====== */
+
+.reviews-slider {
+  position: relative;
+  margin-top: 18px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #272a43;
+  background: #000;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65);
+}
+
+.reviews-track {
+  display: flex;
+  transition: transform 0.35s ease;
+}
+
+.review-slide {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.review-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Стрелки */
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 18px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.slider-arrow--prev {
+  left: 10px;
+}
+
+.slider-arrow--next {
+  right: 10px;
+}
+
+.slider-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Точки */
+
+.slider-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.slider-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slider-dot--active {
+  width: 10px;
+  background: #ffb347;
+}
+
+/* На мобиле стрелки можно чуть уменьшить, если хочешь */
+@media (max-width: 480px) {
+  .slider-arrow {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+}
+
