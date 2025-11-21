@@ -767,3 +767,15 @@ img {
   }
 }
 
+.nav a.active {
+  color: #ffb347;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+.nav__list a.active {
+  opacity: 1;
+  color: #ffb347;
+}

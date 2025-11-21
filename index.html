@@ -21,7 +21,7 @@
 <body>
   <header class="header">
     <div class="container header__inner">
-      <div class="logo">Mines Helper</div>
+      <a href="index.html" class="logo">Mines Helper</a>
 
       <button class="burger" aria-label="Открыть меню">
         <span></span>
@@ -31,7 +31,7 @@
 
       <nav class="nav">
         <ul class="nav__list">
-          <li><a href="index.html">Главная</a></li>
+          <li><a href="index.html" class="active">Главная</a></li>
           <li><a href="pages/guide.html">Инструкция</a></li>
           <li><a href="pages/platform.html">Где играть</a></li>
           <li><a href="pages/reviews.html">Отзывы</a></li>
@@ -41,52 +41,47 @@
   </header>
 
   <main class="main">
-    <!-- HERO: первый экран -->
+    <!-- HERO -->
     <section class="hero container">
       <p class="hero__label">Инструмент подсказок для Mines</p>
       <h1>Подсказки, куда кликать в игре Mines — в реальном времени</h1>
       <p class="hero__subtitle">
-        Инструмент помогает выбирать безопасные клетки и снижает хаотичные клики.
-        Не гарантирует прибыль, но даёт структуру и больше контроля над игрой.
+        Инструмент помогает выбирать более безопасные клетки и снижать хаотичные клики.
+        Не обещает прибыль, но даёт структуру и больше контроля над игрой.
       </p>
 
       <div class="hero__actions">
-        <!-- Основная кнопка: запуск бота -->
-        <a href="#cta" class="btn">Запустить бота в Telegram</a>
-
-        <p class="hero__note">
-          Работает на телефоне и в браузере · Без доступа к аккаунту
-        </p>
-
-        <div class="hero__links">
-          <!-- TODO: сюда позже подставим реальную ссылку на ТГ-канал (ru/en и т.д.) -->
-          <a href="#" class="hero-link hero-link--tg" id="hero-tg-channel">
-            Telegram-канал с примерами игр
-          </a>
-
-          <!-- TODO: сюда позже подставим реальную ссылку на 1win (под конкретный гео/язык) -->
-          <a href="#" class="hero-link hero-link--1win" id="hero-onewin">
-            Перейти на сайт 1win
-          </a>
-        </div>
+        <a href="#" class="btn">Запустить бота в Telegram</a>
+        <a href="pages/guide.html" class="btn btn--outline">Пошаговая инструкция</a>
       </div>
+
+      <div class="hero__links">
+        <a href="#" class="hero-link">Telegram-канал с примерами</a>
+        <span>·</span>
+        <a href="pages/platform.html" class="hero-link">Где играть в Mines</a>
+      </div>
+
+      <p class="hero__note">
+        Важный дисклеймер: это не “бот, который делает x2 к банку”, а подсказчик.
+        Риск в игре остаётся всегда, и к нему нужно относиться осознанно.
+      </p>
     </section>
 
-    <!-- Блок: Как это работает -->
+    <!-- Как работает инструмент -->
     <section class="section container">
       <h2 class="section__title">Как работает инструмент</h2>
       <div class="steps">
         <article class="step-card">
           <h3>1. Открываешь игру Mines</h3>
-          <p>Запускаешь игру на той платформе, где играешь обычно. Поддержка мобильных устройств.</p>
+          <p>Запускаешь Mines на 1win (или в приложении), как обычно. Инструмент не меняет механику игры.</p>
         </article>
         <article class="step-card">
-          <h3>2. Включаешь нашего бота</h3>
-          <p>Запускаешь бота в Telegram и следуешь простой инструкции по связке с игрой.</p>
+          <h3>2. Запускаешь бота в Telegram</h3>
+          <p>Открываешь нашего бота и следуешь простой инструкции: регистрация, депозит, мини-приложение.</p>
         </article>
         <article class="step-card">
-          <h3>3. Получаешь сигналы в реальном времени</h3>
-          <p>Бот показывает подсказки, куда кликать. Ты принимаешь решение, не играя вслепую.</p>
+          <h3>3. Получаешь подсказки по клеткам</h3>
+          <p>Бот показывает подсказки, какие клетки потенциально безопаснее. Ты принимаешь решение сам, не тыкая вслепую.</p>
         </article>
         <article class="step-card">
           <h3>4. Играешь осознаннее</h3>
@@ -144,7 +139,12 @@
         <p class="onboard-extra__text">
           Хочешь увидеть весь процесс на видео — от регистрации до первого запуска?
         </p>
-        <a href="https://t.me/mm_work_team/19" class="btn btn--outline onboard-video" target="_blank" rel="noopener">
+        <a
+          href="https://t.me/mm_work_team/19"
+          class="btn btn--outline onboard-video"
+          target="_blank"
+          rel="noopener"
+        >
           ▶ Посмотреть видео-руководство
         </a>
         <p class="onboard-support">
@@ -154,105 +154,111 @@
       </div>
     </section>
 
-    <!-- Блок: Зачем он нужен -->
+    <!-- Чем полезен -->
     <section class="section section--alt">
       <div class="container">
         <h2 class="section__title">Чем полезен Mines Helper</h2>
         <div class="features">
           <article class="feature-card">
-            <h3 class="feature-card__title">Меньше рандомных кликов</h3>
-            <p>Большинство игроков тыкают наугад. Подсказки помогают структурировать игру и не “кликать от балды”.</p>
+            <h3>Меньше хаоса в игре</h3>
+            <p>
+              Ты не тыкаешь клетки “по ощущениям”, а следуешь системе подсказок. Это не убирает риск,
+              но помогает играть структурно.
+            </p>
           </article>
           <article class="feature-card">
-            <h3 class="feature-card__title">Подходит новичкам</h3>
-            <p>Не нужно разбираться в сложных стратегиях. Следуешь шагам и смотришь на сигналы бота.</p>
+            <h3>Поддержка мобильных устройств</h3>
+            <p>
+              Весь процесс рассчитан на телефон: бот в Telegram и игра Mines на 1win.
+              Можно играть “с дивана”, не включая компьютер.
+            </p>
           </article>
           <article class="feature-card">
-            <h3 class="feature-card__title">Сигналы в реальном времени</h3>
-            <p>Подсказки обновляются по ходу игры. Ты видишь, куда бот предлагает кликать прямо сейчас.</p>
+            <h3>Честный подход без сказок</h3>
+            <p>
+              Мы не продаём “золотую кнопку”. Подсказки помогают принимать решения,
+              но не превращают игру в банкомат.
+            </p>
           </article>
           <article class="feature-card">
-            <h3 class="feature-card__title">Работает на телефоне</h3>
-            <p>Игру и бота можно держать рядом: игра в одном окне, подсказки — в другом.</p>
+            <h3>Простая интеграция</h3>
+            <p>
+              Пошаговая инструкция и видео-гид: даже новичок разберётся, как подключить бота и открыть подсказки в Mines.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Блок CTA c повтором оффера -->
-    <section class="section container" id="cta">
-      <div class="cta-card">
-        <h2>Готов протестировать подсказки в Mines?</h2>
-        <p>
-          Запусти бота, следуй инструкциям и оцени, насколько легче играть, когда есть структура.
-        </p>
-
-        <!-- Основная кнопка: запуск бота -->
-        <a href="#" class="btn cta-card__btn-main" id="cta-bot-start">
-          Запустить бота в Telegram
-        </a>
-
-        <div class="cta-card__buttons">
-          <!-- TODO: сюда позже подставим реальную ссылку на ТГ-канал -->
-          <a href="#" class="btn btn--outline cta-card__btn" id="cta-tg-channel">
-            Открыть Telegram-канал
-          </a>
-
-          <!-- TODO: сюда позже подставим реальную ссылку на 1win -->
-          <a href="#" class="btn btn--outline cta-card__btn" id="cta-onewin">
-            Перейти на 1win
-          </a>
-        </div>
-
-        <p class="cta-card__note">
-          Мы не обещаем доход. Инструмент помогает принимать решения, но риск игры остаётся.
-        </p>
-      </div>
-    </section>
-
-    <!-- Блок FAQ -->
-    <section class="section section--alt">
+    <!-- CTA -->
+    <section class="section">
       <div class="container">
-        <h2 class="section__title">Частые вопросы</h2>
-        <div class="faq">
-          <details class="faq-item" open>
-            <summary>Гарантирует ли инструмент выигрыш?</summary>
-            <p>
-              Нет. Это не “чудо-бот” и не гарантия дохода. Это подсказчик, который уменьшает хаос
-              и помогает принимать решения, но риск игры остаётся всегда.
-            </p>
-          </details>
+        <div class="cta-card" id="cta">
+          <h2>Готов протестировать подсказки в Mines?</h2>
+          <p>
+            Сначала убедись, что понимаешь риски и не относишься к игре как к “способу заработка”.
+            Инструмент — это помощь в принятии решений, а не гарантия дохода.
+          </p>
 
-          <details class="faq-item">
-            <summary>Сложно ли пользоваться ботом?</summary>
-            <p>
-              Нет. В инструкции по шагам показано: как открыть игру, как запустить бота и как считывать подсказки.
-              Даже новичок разберётся за пару минут.
-            </p>
-          </details>
+          <div class="cta-card__btn-main">
+            <a href="#" class="btn">Запустить бота в Telegram</a>
+          </div>
 
-          <details class="faq-item">
-            <summary>На каких устройствах это работает?</summary>
-            <p>
-              Инструмент рассчитан прежде всего на мобильные устройства, но отлично работает и на компьютере.
-              Достаточно браузера и Telegram.
-            </p>
-          </details>
+          <div class="cta-card__buttons">
+            <a href="pages/guide.html" class="btn btn--outline">Посмотреть инструкцию</a>
+            <a href="pages/platform.html" class="btn btn--outline">Где играть в Mines</a>
+          </div>
 
-          <details class="faq-item">
-            <summary>Нужен ли депозит или какие-то данные от аккаунта?</summary>
-            <p>
-              Нет. Мы не просим логины, пароли или платёжные данные. Ты играешь на своей стороне, бот — на своей.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Почему вы не пишете конкретные проценты или доход?</summary>
-            <p>
-              Потому что это было бы обманом. Игры всегда связаны с риском. Мы даём инструмент, а не обещание.
-            </p>
-          </details>
+          <p class="cta-card__note">
+            Если остались вопросы — напиши в поддержку:
+            <a href="https://t.me/MM_helpy" target="_blank" rel="noopener">@MM_helpy</a>
+          </p>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt container">
+      <h2 class="section__title">Частые вопросы</h2>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>Гарантирует ли инструмент выигрыш?</summary>
+          <p>
+            Нет. Это не “чудо-бот” и не гарантия дохода. Это подсказчик, который уменьшает хаос
+            и помогает принимать решения, но риск игры остаётся всегда.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Сложно ли пользоваться ботом?</summary>
+          <p>
+            Нет. В инструкции по шагам показано: как открыть игру, как запустить бота и как считывать подсказки.
+            Даже новичок разберётся за пару минут.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>На каких устройствах это работает?</summary>
+          <p>
+            Инструмент рассчитан прежде всего на мобильные устройства, но отлично работает и на компьютере.
+            Достаточно браузера и Telegram.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Нужен ли депозит или какие-то данные от аккаунта?</summary>
+          <p>
+            Для доступа к подсказкам нужен депозит на 1win, но мы не просим логины, пароли или платёжные данные.
+            Ты играешь на своей стороне, бот — на своей.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Почему вы не пишете конкретные проценты или доход?</summary>
+          <p>
+            Потому что это было бы обманом. Игры всегда связаны с риском. Мы даём инструмент, а не обещание.
+          </p>
+        </details>
       </div>
     </section>
   </main>
