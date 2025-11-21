@@ -3,43 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Где играть — Mines Helper</title>
-
-  <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ59P95EE7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YJ59P95EE7');
-</script>
+  <title>Где играть в Mines — Mines Helper</title>
 
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
-      <div class="logo">Mines Helper</div>
-      <button class="burger"><span></span><span></span><span></span></button>
+      <a href="../index.html" class="logo">Mines Helper</a>
+
       <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="../index.html">Главная</a></li>
-          <li><a href="guide.html">Инструкция</a></li>
-          <li><a href="platform.html">Где играть</a></li>
-          <li><a href="reviews.html">Отзывы</a></li>
-        </ul>
+        <a href="../index.html">Главная</a>
+        <a href="guide.html">Инструкция</a>
+        <a href="platform.html" class="active">Где играть</a>
+        <a href="reviews.html">Отзывы</a>
       </nav>
+
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main class="main container">
-    <h1>Где играть в Mines</h1>
-    <p>Здесь позже будет информация о площадке, где доступна игра.</p>
+  <main class="main">
+    <!-- Вступление -->
+    <section class="section">
+      <div class="container">
+        <h1 class="section__title">Где играть в Mines</h1>
+        <p style="font-size:14px; color:#c7c7d4; max-width:640px;">
+          Для работы нашего бота и подсказок мы используем площадку <strong>1win</strong>.
+          На этой странице коротко разберём, почему именно 1win и как там быстро найти игру
+          <strong>Mines</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Блок про 1win -->
+    <section class="section">
+      <div class="container platform-layout">
+        <div>
+          <img src="../img/1win-logo.png" alt="Логотип 1win" class="platform-logo">
+
+          <h2 class="section__title" style="font-size:20px; margin-bottom:8px;">
+            Почему мы используем 1win
+          </h2>
+          <ul class="platform-list">
+            <li>Игра <strong>Mines</strong> доступна в отдельном разделе — её легко найти и запустить.</li>
+            <li>Есть удобные приложения и адаптация под телефон — играть можно прямо с мобилы.</li>
+            <li>Привычные способы пополнения и вывода средств.</li>
+            <li>Простой интерфейс: не нужно разбираться в куче сложных меню.</li>
+          </ul>
+        </div>
+
+        <figure class="platform-figure">
+          <img src="../img/1win-mines-screen.jpg" alt="Экран 1win с игрой Mines" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Как найти Mines -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Как найти игру Mines на 1win</h2>
+
+        <div class="steps">
+          <article class="step-card">
+            <h3>1. Авторизуйся в 1win</h3>
+            <p>
+              Зайди в свой аккаунт 1win через браузер или приложение.
+              Если аккаунта нет — создай его по инструкции в разделе «Инструкция».
+            </p>
+          </article>
+
+          <article class="step-card">
+            <h3>2. Открой раздел с играми</h3>
+            <p>
+              Найди в меню раздел с играми (1win games). Там собраны быстрые игры —
+              в том числе <strong>Mines</strong>.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <h3>3. Найди иконку Mines</h3>
+            <p>
+              Пролистай список игр до иконки <strong>Mines</strong> — она выглядит так, как на скрине выше.
+              Нажми по ней, чтобы открыть игру.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <h3>4. Запусти бота параллельно</h3>
+            <p>
+              Дальше работаешь по связке: игра открыта в одном окне, подсказки от бота — в другом.
+              Бот помогает структурировать клики, но не гарантирует выигрыши.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container cta-card">
+        <h2 class="section__title" style="margin-bottom:8px;">
+          Готов протестировать подсказки в реальной игре?
+        </h2>
+        <p style="font-size:14px; color:#d8d8e5; margin-bottom:14px;">
+          Сначала убедись, что у тебя есть аккаунт на 1win и игра <strong>Mines</strong> открывается.
+          После этого запускай бота и следуй инструкции.
+        </p>
+
+        <div class="cta-actions">
+          <!-- TODO: сюда позже вставим реферальную ссылку 1win -->
+          <a href="#" class="btn btn--outline">Перейти на сайт 1win</a>
+          <a href="../index.html#cta" class="btn">Запустить бота в Telegram</a>
+        </div>
+
+        <p class="cta-note">
+          Если по площадке или доступу к игре возникают вопросы —
+          напиши в поддержку в Telegram:
+          <a href="https://t.me/MM_helpy" target="_blank" rel="noopener">@MM_helpy</a>
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      © <span id="year"></span> Mines Helper
+      <p>© <span id="year"></span> Mines Helper</p>
     </div>
   </footer>
 

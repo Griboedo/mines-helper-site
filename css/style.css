@@ -572,3 +572,97 @@ img {
     flex-direction: row;
   }
 }
+
+/* ====== Страница "Где играть" ====== */
+
+.platform-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.platform-logo {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.platform-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #d8d8e5;
+}
+
+.platform-list li::before {
+  content: "•";
+  color: #ffb347;
+  margin-right: 6px;
+}
+
+.platform-figure {
+  max-width: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #272a43;
+  background: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.platform-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cta-card {
+  border-radius: 16px;
+  padding: 18px 16px 16px;
+  background: linear-gradient(135deg, #ffcf7f 0, #ffb347 45%, #f2994a 100%);
+  color: #1b1b26;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+.cta-card .section__title {
+  color: #1b1b26;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.cta-card .btn--outline {
+  border-color: #1b1b26;
+  color: #1b1b26;
+}
+
+.cta-card .btn--outline:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.cta-note {
+  font-size: 13px;
+}
+
+/* десктопная раскладка для блока про 1win */
+@media (min-width: 768px) {
+  .platform-layout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .platform-figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
