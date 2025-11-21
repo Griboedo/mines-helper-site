@@ -1,49 +1,165 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Инструкция — Mines Helper</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инструкция — Mines Helper</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-  <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ59P95EE7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YJ59P95EE7');
-</script>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="../index.html" class="logo">Mines Helper</a>
 
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <header class="header">
-    <div class="container header__inner">
-      <div class="logo">Mines Helper</div>
-      <button class="burger"><span></span><span></span><span></span></button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="../index.html">Главная</a></li>
-          <li><a href="guide.html">Инструкция</a></li>
-          <li><a href="platform.html">Где играть</a></li>
-          <li><a href="reviews.html">Отзывы</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <nav class="nav">
+          <a href="../index.html">Главная</a>
+          <a href="guide.html" class="active">Инструкция</a>
+          <a href="platform.html">Где играть</a>
+          <a href="reviews.html">Отзывы</a>
+        </nav>
 
-  <main class="main container">
-    <h1>Инструкция по использованию</h1>
-    <p>Здесь будет описание шагов, скриншоты и гайд по запуску бота.</p>
-  </main>
+        <button class="burger" id="burgerBtn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-  <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Mines Helper
-    </div>
-  </footer>
+    <main class="main container">
 
-  <script src="../js/main.js"></script>
-</body>
+      <h1 class="page-title">Инструкция по запуску бота</h1>
+      <p class="page-subtitle">
+        Здесь собраны все шаги: от первого запуска бота до входа в мини-приложение с подсказками по игре Mines.
+        Двигаемся по порядку — пропускать шаги нельзя.
+      </p>
+
+
+      <!-- Шаг 1 -->
+      <section class="guide-step">
+        <h2 class="guide-title">Шаг 1. Выбор языка</h2>
+
+        <div class="guide-grid">
+          <div class="guide-card">
+            <p>
+              При первом запуске бот предложит выбрать язык. Выбери тот, на котором тебе удобно читать и выполнять шаги.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <p>
+              От выбранного языка зависят тексты подсказок и дальнейшие инструкции. Язык можно поменять позже.
+            </p>
+          </div>
+        </div>
+
+        <img class="guide-img" src="../img/guide-step1-lang.jpg" alt="Выбор языка в Telegram-боте">
+      </section>
+
+
+      <!-- Шаг 2 -->
+      <section class="guide-step">
+        <h2 class="guide-title">Шаг 2. Регистрация на 1win через бота</h2>
+
+        <div class="guide-grid">
+          <div class="guide-card">
+            <p>
+              После выбора языка бот отправит приветственное сообщение и попросит пройти регистрацию на 1win —
+              это нужно, чтобы связать твой аккаунт с мини-приложением подсказок.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <p>
+              Нажми кнопку <b>«Пройти регистрацию»</b> и заполни форму: номер телефона, пароль, подтверждение.
+            </p>
+          </div>
+        </div>
+
+        <img class="guide-img" src="../img/guide-step2-register.jpg" alt="Регистрация в боте">
+      </section>
+
+
+      <!-- Шаг 3 -->
+      <section class="guide-step">
+        <h2 class="guide-title">Шаг 3. Пополнение депозита</h2>
+
+        <div class="guide-grid">
+          <div class="guide-card">
+            <p>
+              После регистрации бот сообщит, что нужно пополнить игровой счёт. Без депозита доступ к подсказкам
+              не открывается.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <p>
+              Нажми кнопку <b>«Пополнить баланс»</b> и внеси депозит удобным способом.
+              После пополнения вернись в бот и нажми <b>«Проверить пополнение»</b>.
+            </p>
+          </div>
+        </div>
+
+        <img class="guide-img" src="../img/guide-step3-deposit.jpg" alt="Пополнение депозита">
+      </section>
+
+
+      <!-- Шаг 4 -->
+      <section class="guide-step">
+        <h2 class="guide-title">Шаг 4. Открой мини-приложение в боте</h2>
+
+        <div class="guide-grid">
+          <div class="guide-card">
+            <p>
+              Теперь бот откроет доступ к мини-приложению. Это окно, где показываются сигналы:
+              куда нажимать в игре Mines прямо сейчас.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <p>
+              Нажми кнопку <b>«Приложение»</b> — и откроется мини-программа с выбором игр. Выбираем Mines.
+            </p>
+          </div>
+        </div>
+
+        <img class="guide-img" src="../img/guide-step4-open-app.jpg" alt="Открытие мини-приложения">
+      </section>
+
+
+      <!-- Шаг 5 -->
+      <section class="guide-step">
+        <h2 class="guide-title">Шаг 5. Выбор игры Mines</h2>
+
+        <div class="guide-grid">
+          <div class="guide-card">
+            <p>
+              Внутри мини-приложения выбери игру <b>Mines</b>. После этого появятся подсказки,
+              обновляющиеся в реальном времени.
+            </p>
+          </div>
+
+          <div class="guide-card">
+            <p>
+              Держи игру и мини-приложение открытыми рядом: игра в одном окне, подсказки — в другом.
+            </p>
+          </div>
+        </div>
+
+        <img class="guide-img" src="../img/guide-step5-mines.jpg" alt="Выбор игры Mines">
+      </section>
+
+
+      <p class="guide-help">
+        Если остались вопросы — пиши в поддержку Telegram:
+        <a href="https://t.me/MM_helpy" target="_blank">@MM_helpy</a>
+      </p>
+
+    </main>
+
+    <footer class="footer">
+      © 2025 Mines Helper
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
 </html>
-

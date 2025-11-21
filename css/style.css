@@ -312,6 +312,26 @@ img {
   color: #c7c7d4;
 }
 
+/* Картинки в инструкции (guide.html) */
+
+.guide-figure {
+  margin-top: 10px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #272a43;
+  background: #000;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guide-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
 /* ========== CTA-КАРТА ========== */
 
 .cta-card {
@@ -402,6 +422,84 @@ img {
   font-size: 13px;
   color: #8f90a6;
   background: #050612;
+}
+
+/* ====== КОРОТКАЯ ИНСТРУКЦИЯ НА ГЛАВНОЙ ====== */
+
+.onboard-steps {
+  display: grid;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.onboard-card {
+  display: flex;
+  align-items: center;
+  /* иконка и текст по центру по вертикали */
+  gap: 12px;
+  border-radius: 14px;
+  padding: 12px 13px 11px;
+  background: #101223;
+  border: 1px solid #272a43;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+}
+
+.onboard-card__icon {
+  flex-shrink: 0;
+  width: 46px;
+  /* больше круг */
+  height: 46px;
+  border-radius: 999px;
+  background: radial-gradient(circle at top, #ffcf7f 0, #ffb347 60%, #f2994a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  /* эмодзи крупнее */
+}
+
+.onboard-card__title {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.onboard-card__text {
+  font-size: 13px;
+  color: #c7c7d4;
+}
+
+
+.onboard-extra {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.onboard-extra__text {
+  font-size: 14px;
+  color: #d8d8e5;
+}
+
+.onboard-video {
+  align-self: flex-start;
+}
+
+.onboard-support {
+  font-size: 13px;
+  color: #b1b1c5;
+}
+
+.onboard-support a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Десктопное расположение для онбординга */
+@media (min-width: 768px) {
+  .onboard-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* ========== ДЕСКТОПНАЯ ВЕРСИЯ ========== */
