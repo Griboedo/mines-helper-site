@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Инструкция — Mines Helper</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пошаговая инструкция — Mines Helper</title>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ59P95EE7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YJ59P95EE7');
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
+
       <a href="../index.html" class="logo">Mines Helper</a>
 
       <div class="lang-switch">
@@ -19,9 +30,7 @@
       </div>
 
       <button class="burger" aria-label="Открыть меню">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
 
       <nav class="nav">
@@ -35,197 +44,86 @@
     </div>
   </header>
 
-
   <main class="main">
+
     <section class="section">
       <div class="container">
-        <h1 class="section__title">Инструкция по запуску бота</h1>
-        <p style="font-size:14px; color:#c7c7d4; margin-bottom:14px;">
-          Здесь собраны все шаги: от первого запуска бота до входа в мини-приложение с подсказками по игре Mines.
-          Двигаемся по порядку — пропускать шаги нельзя.
+        <h1 class="page-title">Пошаговая инструкция</h1>
+        <p class="page-subtitle">
+          Следуй шагам ниже, чтобы быстро получить доступ к подсказкам в игре Mines через Telegram-бота.
         </p>
-      </div>
-    </section>
 
-    <!-- Шаг 1 -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title">Шаг 1. Выбор языка</h2>
-
-        <div class="steps">
-          <article class="step-card">
-            <p class="step-text">
-              При первом запуске бот предложит выбрать язык (например, русский или таджикский).
-              Выбери тот язык, на котором тебе удобнее читать и выполнять шаги.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <p class="step-text">
-              От выбранного языка зависят тексты подсказок и некоторые дальнейшие инструкции.
-              Позже язык всегда можно будет поменять в настройках бота.
-            </p>
-          </article>
+        <!-- STEP 1 -->
+        <div class="guide-step">
+          <h2>1. Открой бота и выбери язык</h2>
+          <p class="step-text">
+            При первом запуске бот предложит выбрать язык интерфейса. Выбери русский или таджикский — любой, на котором тебе удобнее работать.
+          </p>
+          <figure class="guide-figure">
+            <img src="../img/step1.jpg" alt="Шаг 1 — выбор языка" />
+          </figure>
         </div>
 
-        <figure class="guide-figure">
-          <img src="../img/guide-step1-lang.jpg" alt="Выбор языка в Telegram-боте">
-        </figure>
-      </div>
-    </section>
-
-    <!-- Шаг 2 -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title">Шаг 2. Регистрация на 1win через бота</h2>
-
-        <div class="steps">
-          <article class="step-card">
-            <p class="step-text">
-              После выбора языка бот отправит приветственное сообщение и попросит пройти регистрацию
-              на 1win. Это нужно, чтобы связать твой аккаунт с мини-приложением подсказок.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <p class="step-text">
-              Нажми кнопку <strong>«Пройти регистрацию»</strong> и заполни форму на сайте 1win:
-              укажи номер телефона, придумай пароль и подтверди аккаунт.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <p class="step-text">
-              После успешной регистрации вернись в бот и нажми <strong>«Проверить регистрацию»</strong>.
-              Бот проверит данные и перейдёт к следующему шагу.
-            </p>
-          </article>
+        <!-- STEP 2 -->
+        <div class="guide-step">
+          <h2>2. Зарегистрируйся в 1win</h2>
+          <p class="step-text">
+            Бот предложит создать аккаунт 1win. Это обязательный шаг — без регистрации доступ к мини-аппу с подсказками не откроется.
+          </p>
+          <figure class="guide-figure">
+            <img src="../img/step2.jpg" alt="Шаг 2 — регистрация" />
+          </figure>
         </div>
 
-        <figure class="guide-figure">
-          <img src="../img/guide-step2-register.jpg" alt="Шаг регистрации в боте">
-        </figure>
-      </div>
-    </section>
-
-    <!-- Шаг 3 -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title">Шаг 3. Пополнение депозита</h2>
-
-        <div class="steps">
-          <article class="step-card">
-            <p class="step-text">
-              После проверки регистрации бот сообщит, что остался последний шаг — пополнить игровой счёт.
-              Без депозита доступ к подсказкам не откроется.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <p class="step-text">
-              Нажми кнопку <strong>«Пополнить баланс»</strong> и внеси депозит на свой аккаунт 1win
-              любым удобным способом.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <p class="step-text">
-              Когда пополнение завершено, вернись в бот и нажми <strong>«Проверить пополнение»</strong>.
-              Если всё в порядке, бот откроет кнопку для входа в мини-приложение.
-            </p>
-          </article>
+        <!-- STEP 3 -->
+        <div class="guide-step">
+          <h2>3. Внеси депозит</h2>
+          <p class="step-text">
+            Чтобы активировать подсказки, нужно пополнить игровой баланс. Бот сам подскажет, какую кнопку нажать.
+          </p>
+          <figure class="guide-figure">
+            <img src="../img/step3.jpg" alt="Шаг 3 — депозит" />
+          </figure>
         </div>
 
-        <figure class="guide-figure">
-          <img src="../img/guide-step3-deposit.jpg" alt="Экран с подтверждением регистрации и пополнением баланса">
-        </figure>
-      </div>
-    </section>
-
-    <!-- Шаг 4 -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title">Шаг 4. Открытие мини-приложения</h2>
-
-        <div class="steps">
-          <article class="step-card">
-            <p class="step-text">
-              После регистрации и пополнения бот предложит открыть мини-приложение.
-              Ты увидишь сообщение с кнопкой <strong>«Приложение»</strong> и подсказкой
-              «Зайди в приложение, чтобы получить сигнал».
-            </p>
-          </article>
-
-          <article class="step-card">
-            <p class="step-text">
-              Нажми кнопку <strong>«Приложение»</strong>. Telegram покажет окно с подтверждением
-              запуска мини-приложения. Подтверди запуск.
-            </p>
-          </article>
+        <!-- STEP 4 -->
+        <div class="guide-step">
+          <h2>4. Открой мини-приложение и выбери Mines</h2>
+          <p class="step-text">
+            После депозита жми «Приложение» → выбирай игру Mines. Теперь подсказки будут отображаться в реальном времени по твоей сетке.
+          </p>
+          <figure class="guide-figure">
+            <img src="../img/step4.jpg" alt="Шаг 4 — запуск подсказок" />
+          </figure>
         </div>
 
-        <figure class="guide-figure">
-          <img src="../img/guide-step4-open-app.jpg" alt="Экран с предложением открыть мини-приложение">
-        </figure>
-      </div>
-    </section>
+        <!-- VIDEO -->
+        <div class="guide-step">
+          <h2>Видео-руководство (2 минуты)</h2>
+          <p class="step-text">
+            Хочешь посмотреть весь процесс от регистрации до запуска подсказок?
+          </p>
 
-    <!-- Шаг 5 -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title">Шаг 5. Выбор игры Mines</h2>
-
-        <div class="steps">
-          <article class="step-card">
-            <p class="step-text">
-              Внутри мини-приложения ты увидишь список игр. Найди игру <strong>Mines</strong>
-              и открой её.
-            </p>
-          </article>
-
-          <article class="step-card">
-            <p class="step-text">
-              Дальше запускаешь игру как обычно, а подсказки от бота используешь как инструмент:
-              он помогает выбирать клетки и снижает хаотичные клики, но не гарантирует выигрыш.
-            </p>
-          </article>
+          <a
+            href="https://t.me/mm_work_team/19"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--outline btn--center"
+          >
+            ▶ Смотреть видео
+          </a>
         </div>
 
-        <figure class="guide-figure">
-          <img src="../img/guide-step5-mines.jpg" alt="Экран мини-приложения с выбором игры Mines">
-        </figure>
+        <!-- SUPPORT -->
+        <div class="guide-step">
+          <p class="step-text">
+            Если что-то непонятно — пиши в поддержку:
+            <a href="https://t.me/MM_helpy" target="_blank" rel="noopener">@MM_helpy</a>
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Видео и поддержка -->
-    <section class="section section--alt">
-      <div class="container">
-        <h2 class="section__title">Видео-руководство</h2>
-        <p style="font-size:14px; color:#d8d8e5; margin-bottom:10px;">
-          Если хочешь увидеть весь процесс вживую — от регистрации до первого запуска подсказок —
-          посмотри подробное видео-инструкцию.
-        </p>
-        <a href="https://t.me/mm_work_team/19" class="btn btn--outline" target="_blank" rel="noopener">
-          ▶ Открыть видео-руководство в Telegram
-        </a>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="section__title">Нужна помощь?</h2>
-        <p style="font-size:14px; color:#c7c7d4; margin-bottom:8px;">
-          Если на каком-то шаге что-то пошло не так — не сливай время и нервы.
-        </p>
-        <p style="font-size:14px; color:#d8d8e5; margin-bottom:4px;">
-          Напиши в поддержку в Telegram — отвечаем по делу.
-        </p>
-        <p style="font-size:14px;">
-          Поддержка:
-          <a href="https://t.me/MM_helpy" target="_blank" rel="noopener">@MM_helpy</a>
-        </p>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
@@ -236,5 +134,4 @@
 
   <script src="../js/main.js"></script>
 </body>
-
 </html>

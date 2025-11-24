@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Где играть в Mines — Mines Helper</title>
-  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ59P95EE7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YJ59P95EE7');
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
+
       <a href="../index.html" class="logo">Mines Helper</a>
 
       <div class="lang-switch">
@@ -19,9 +30,7 @@
       </div>
 
       <button class="burger" aria-label="Открыть меню">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
 
       <nav class="nav">
@@ -35,16 +44,15 @@
     </div>
   </header>
 
-
   <main class="main">
+
     <!-- Вступление -->
     <section class="section">
       <div class="container">
-        <h1 class="section__title">Где играть в Mines</h1>
-        <p style="font-size:14px; color:#c7c7d4; max-width:640px;">
-          Для работы нашего бота и подсказок мы используем площадку <strong>1win</strong>.
-          На этой странице коротко разберём, почему именно 1win и как там быстро найти игру
-          <strong>Mines</strong>.
+        <h1 class="page-title">Где играть в Mines</h1>
+        <p class="page-subtitle">
+          Для работы подсказок мы используем площадку <strong>1win</strong>.
+          Ниже — кратко: почему именно 1win и как там быстро найти игру <strong>Mines</strong>.
         </p>
       </div>
     </section>
@@ -53,16 +61,17 @@
     <section class="section">
       <div class="container platform-layout">
         <div>
-          <img src="../img/1win-logo.png" alt="Логотип 1win" class="platform-logo">
+          <img src="../img/1win-logo.png" alt="Логотип 1win" class="platform-logo" />
 
-          <h2 class="section__title" style="font-size:20px; margin-bottom:8px;">
-            Почему мы используем 1win
+          <h2 class="section__title" style="font-size: 18px; margin-bottom: 8px;">
+            Почему именно 1win
           </h2>
+
           <ul class="platform-list">
             <li>Игра <strong>Mines</strong> доступна в отдельном разделе — её легко найти и запустить.</li>
-            <li>Есть удобные приложения и адаптация под телефон — играть можно прямо с мобилы.</li>
+            <li>Нормальный интерфейс под телефон — не нужно мучаться с десктопной версией.</li>
             <li>Привычные способы пополнения и вывода средств.</li>
-            <li>Простой интерфейс: не нужно разбираться в куче сложных меню.</li>
+            <li>Простое меню: не надо блуждать среди сотен непонятных игр.</li>
           </ul>
         </div>
 
@@ -79,34 +88,34 @@
 
         <div class="steps">
           <article class="step-card">
-            <h3>1. Авторизуйся в 1win</h3>
+            <h3>1. Зайди в свой аккаунт 1win</h3>
             <p>
-              Зайди в свой аккаунт 1win через браузер или приложение.
-              Если аккаунта нет — создай его по инструкции в разделе «Инструкция».
+              Авторизуйся через браузер или приложение. Если аккаунта ещё нет —
+              сначала создай его по инструкции на странице «Инструкция».
             </p>
           </article>
 
           <article class="step-card">
             <h3>2. Открой раздел с играми</h3>
             <p>
-              Найди в меню раздел с играми (1win games). Там собраны быстрые игры —
-              в том числе <strong>Mines</strong>.
+              Перейди в раздел с быстрыми играми (1win Games). Там собраны мини-игры,
+              среди которых есть <strong>Mines</strong>.
             </p>
           </article>
 
           <article class="step-card">
             <h3>3. Найди иконку Mines</h3>
             <p>
-              Пролистай список игр до иконки <strong>Mines</strong> — она выглядит так, как на скрине выше.
-              Нажми по ней, чтобы открыть игру.
+              Пролистай список до игры <strong>Mines</strong> — она выглядит так,
+              как на скриншоте выше. Нажми по иконке, чтобы открыть игру.
             </p>
           </article>
 
           <article class="step-card">
             <h3>4. Запусти бота параллельно</h3>
             <p>
-              Дальше работаешь по связке: игра открыта в одном окне, подсказки от бота — в другом.
-              Бот помогает структурировать клики, но не гарантирует выигрыши.
+              Открой бота в Telegram, включи подсказки — и играй по связке:
+              игра на 1win + сигналы в боте. Инструмент снижает хаос, но не убирает риск.
             </p>
           </article>
         </div>
@@ -117,28 +126,29 @@
     <section class="section">
       <div class="container">
         <div class="cta-card">
-          <h2 class="section__title" style="margin-bottom:8px;">
-            Готов протестировать подсказки в реальной игре?
+          <h2 class="section__title" style="margin-bottom: 8px;">
+            Готов перейти к реальной игре?
           </h2>
-          <p style="font-size:14px; color:#1b1b26; margin-bottom:14px;">
-            Сначала убедись, что у тебя есть аккаунт на 1win и игра <strong>Mines</strong> открывается.
-            После этого запускай бота и следуй инструкции.
+          <p class="cta-card__text">
+            Сначала убедись, что у тебя есть аккаунт на 1win и игра <strong>Mines</strong> открывается без проблем.
+            После этого запускай бота и следуй подсказкам.
           </p>
 
           <div class="cta-actions">
-            <!-- TODO: сюда позже вставим реферальную ссылку 1win -->
+            <!-- TODO: сюда позже поставишь свою партнёрскую ссылку -->
             <a href="#" class="btn btn--outline">Перейти на сайт 1win</a>
             <a href="../index.html#cta" class="btn">Запустить бота в Telegram</a>
           </div>
 
           <p class="cta-note">
-            Если по площадке или доступу к игре возникают вопросы —
-            напиши в поддержку в Telegram:
+            Если возникают вопросы по площадке или доступу к игре —
+            напиши в поддержку:
             <a href="https://t.me/MM_helpy" target="_blank" rel="noopener">@MM_helpy</a>
           </p>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -149,5 +159,4 @@
 
   <script src="../js/main.js"></script>
 </body>
-
 </html>
