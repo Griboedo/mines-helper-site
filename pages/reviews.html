@@ -10,21 +10,31 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="header__inner container">
-      <a href="../index.html" class="logo">Mines Helper</a>
+  <div class="container header__inner">
+    <a href="../index.html" class="logo">Mines Helper</a>
 
-      <nav class="nav" id="nav">
-        <a href="../index.html">Главная</a>
-        <a href="guide.html">Инструкция</a>
-        <a href="platform.html">Где играть</a>
-        <a href="reviews.html" class="active">Отзывы</a>
-      </nav>
-
-      <button class="burger" id="burger" aria-label="Открыть меню">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="lang-switch">
+      <button class="lang-btn lang-btn--active" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="tj">TJ</button>
     </div>
-  </header>
+
+    <button class="burger" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="guide.html">Инструкция</a></li>
+        <li><a href="platform.html">Где играть</a></li>
+        <li><a href="reviews.html" class="active">Отзывы</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
   <main class="main container">
 
