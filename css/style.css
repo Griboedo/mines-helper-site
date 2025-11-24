@@ -153,10 +153,10 @@ img {
 .burger {
   display: none;
   flex-direction: column;
-  gap: 4px;
+  gap: 14px;
   background: none;
   border: none;
-  padding: 110;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -438,7 +438,7 @@ img {
 }
 
 .guide-step {
-  margin-bottom: 28px;
+  margin-bottom: 14px;
 }
 
 .guide-step h2 {
@@ -525,9 +525,15 @@ img {
   max-width: 100%;
 }
 
+/* КАРТИНКА В СЛАЙДЕРЕ — ОГРАНИЧЕНИЕ ВЫСОТЫ */
 .review-slide img {
   width: 100%;
-  display: block;
+  max-height: 1000px;
+  /* чтобы не вылезало за экран на десктопе */
+  object-fit: contain;
+  /* картинка вписывается, не обрезается */
+  margin: 0 auto;
+  background: #000;
 }
 
 /* стрелки */
@@ -537,17 +543,17 @@ img {
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.65);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 2;
-  font-size: 18px;
+  font-size: 22px;
   transition: background 0.2s ease, transform 0.1s ease;
 }
 
@@ -560,7 +566,7 @@ img {
 }
 
 .slider-arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   transform: translateY(-50%) scale(1.05);
 }
 
@@ -692,13 +698,18 @@ img {
   }
 
   .slider-arrow {
-    width: 26px;
-    height: 26px;
-    font-size: 16px;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
   }
 
   .lang-btn {
     font-size: 10px;
     padding: 2px 6px;
+  }
+
+  .review-slide img {
+    max-height: 900px;
+    /* меньше высота, чтобы не занимало весь экран */
   }
 }
