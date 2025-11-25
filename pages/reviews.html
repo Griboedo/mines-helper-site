@@ -192,62 +192,78 @@
 
     <!-- Галерея скриншотов -->
     <section class="section">
-      <div class="container">
-        <h2 data-lang="ru">Скриншоты отзывов и результатов</h2>
-        <h2 data-lang="tj">Скриншотҳои шарҳҳо ва натиҷаҳо</h2>
+  <div class="container">
+    <h2 data-lang="ru">Скриншоты отзывов и результатов</h2>
+    <h2 data-lang="tj">Скриншотҳои шарҳҳо ва натиҷаҳо</h2>
 
-        <p data-lang="ru">
-          Ниже можно разместить скриншоты переписок из Telegram, истории с результатами игр и другие доказательства
-          того,
-          что люди действительно используют Mines Helper. Рекомендуется периодически обновлять этот блок.
-        </p>
-        <p data-lang="tj">
-          Дар поён метавон скриншотҳои сӯҳбатҳо аз Telegram, натиҷаҳои бозиҳо ва дигар далелҳоро ҷойгир кард,
-          ки нишон медиҳанд, ки мардум воқеан Mines Helper-ро истифода мебаранд. Маслиҳат дода мешавад, ки ин блокро
-          гоҳ-гоҳ нав кунӣ.
-        </p>
+    <p data-lang="ru">
+      Ниже — реальные скриншоты переписок пользователей, которые делились отзывами и результатами игры.
+      Слайдер поддерживает жесты (свайпы) на мобильных устройствах.
+    </p>
+    <p data-lang="tj">
+      Дар поён — скриншотҳои воқеии сӯҳбатҳои корбароне, ки натиҷаҳо ва фикру мулоҳизаҳои худро фиристодаанд.
+      Слайдер дар мобил бо свайп кор мекунад.
+    </p>
 
-        <!-- Галерея: просто сетка из картинок -->
-        <div class="reviews-grid">
-          <!-- Примеры. Замени src на реальные файлы: review-1.png, review-2.png и т.д. -->
-          <figure class="review-card">
-            <img src="../img/review-1.png" alt="Скриншот отзыва 1">
-            <figcaption data-lang="ru">«Спасибо за подсказки, нормально поднял на Mines»</figcaption>
-            <figcaption data-lang="tj">«Ташаккур барои пешниҳодҳо, дар Mines бад набозӣ кардам»</figcaption>
-          </figure>
+    <!-- СЛАЙДЕР -->
+    <div class="slider" id="reviewSlider">
+      <div class="slider-track">
 
-          <figure class="review-card">
-            <img src="../img/review-2.png" alt="Скриншот отзыва 2">
-            <figcaption data-lang="ru">«Стало меньше эмоций, играю спокойнее»</figcaption>
-            <figcaption data-lang="tj">«Эҳсосотам камтар шуд, оромтар бозӣ мекунам»</figcaption>
-          </figure>
-
-          <figure class="review-card">
-            <img src="../img/review-3.png" alt="Скриншот отзыва 3">
-            <figcaption data-lang="ru">«Есть и минусы, но в целом доволен форматом»</figcaption>
-            <figcaption data-lang="tj">«Бохт ҳам мешавад, вале аз формати кор розӣ ҳастам»</figcaption>
-          </figure>
-
-          <figure class="review-card">
-            <img src="../img/review-4.png" alt="Скриншот отзыва 4">
-            <figcaption data-lang="ru">«Главное — не играть на последние деньги»</figcaption>
-            <figcaption data-lang="tj">«Муҳимаш — бо пулҳои охирин бозӣ накунӣ»</figcaption>
-          </figure>
+        <!-- СЛАЙД 1 -->
+        <div class="slide">
+          <img src="../img/review-1.jpg" alt="Отзыв 1">
+          <p class="slide-caption" data-lang="ru">«Неплохо поднял, подсказки подходят»</p>
+          <p class="slide-caption" data-lang="tj">«Бад набуд, пешниҳодҳо кор мекунанд»</p>
         </div>
 
-        <div class="section-cta">
-          <a data-i18n-link class="btn btn-primary" data-lang="ru" href="https://t.me/YOUR_RU_BOT"
-            data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
-            Смотреть больше примеров в Telegram
-          </a>
-
-          <a data-i18n-link class="btn btn-primary" data-lang="tj" href="https://t.me/YOUR_TJ_BOT"
-            data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
-            Дидани мисолҳои бештар дар Telegram
-          </a>
+        <!-- СЛАЙД 2 -->
+        <div class="slide">
+          <img src="../img/review-2.jpg" alt="Отзыв 2">
+          <p class="slide-caption" data-lang="ru">«Стало спокойнее играть»</p>
+          <p class="slide-caption" data-lang="tj">«Оромтар бозӣ мекунам»</p>
         </div>
+
+        <!-- СЛАЙД 3 -->
+        <div class="slide">
+          <img src="../img/review-3.jpg" alt="Отзыв 3">
+          <p class="slide-caption" data-lang="ru">«Есть минусы, но пользуюсь регулярно»</p>
+          <p class="slide-caption" data-lang="tj">«Гоҳ-гоҳ бохт мешавад, аммо истифода мебарам»</p>
+        </div>
+
+        <!-- СЛАЙД 4 -->
+        <div class="slide">
+          <img src="../img/review-4.jpg" alt="Отзыв 4">
+          <p class="slide-caption" data-lang="ru">«Подсказки помогают не тильтовать»</p>
+          <p class="slide-caption" data-lang="tj">«Ба асабонӣ нашудан кумак мекунад»</p>
+        </div>
+
+        <!-- СЛАЙД 5 -->
+        <div class="slide">
+          <img src="../img/review-5.jpg" alt="Отзыв 4">
+          <p class="slide-caption" data-lang="ru">«Подсказки помогают не тильтовать»</p>
+          <p class="slide-caption" data-lang="tj">«Ба асабонӣ нашудан кумак мекунад»</p>
+        </div>
+
+        <!-- СЛАЙД 6 -->
+        <div class="slide">
+          <img src="../img/review-6.jpg" alt="Отзыв 4">
+          <p class="slide-caption" data-lang="ru">«Подсказки помогают не тильтовать»</p>
+          <p class="slide-caption" data-lang="tj">«Ба асабонӣ нашудан кумак мекунад»</p>
+        </div>
+
       </div>
-    </section>
+
+      <!-- КНОПКИ -->
+      <button class="slider-btn prev" data-slider-prev>‹</button>
+      <button class="slider-btn next" data-slider-next>›</button>
+
+      <!-- ТОЧКИ -->
+      <div class="slider-dots" data-slider-dots></div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Блок с важным дисклеймером -->
     <section class="section section-alt">
