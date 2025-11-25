@@ -698,9 +698,9 @@ img {
   }
 
   .slider-arrow {
-    width: 34px;
-    height: 34px;
-    font-size: 18px;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
   }
 
   .lang-btn {
@@ -708,8 +708,19 @@ img {
     padding: 2px 6px;
   }
 
-  .review-slide img {
-    max-height: 900px;
-    /* меньше высота, чтобы не занимало весь экран */
+  /* ФИКС ШАПКИ НА УЗКИХ ЭКРАНАХ */
+  .header__inner {
+    gap: 8px;
+    /* меньше воздуха между элементами */
+  }
+
+  .logo {
+    font-size: 16px;
+    /* чутка поменьше, чтобы не съедать ширину */
+  }
+
+  .burger {
+    margin-left: auto;
+    /* бургер прижимается вправо и не вылетает за экран */
   }
 }
