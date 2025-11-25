@@ -1,137 +1,410 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Пошаговая инструкция — Mines Helper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ59P95EE7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YJ59P95EE7');
-  </script>
+  <!-- SEO -->
+  <title>Инструкция по использованию Mines Helper — как запустить сигнал бот для Mines</title>
+  <meta name="description"
+    content="Пошаговая инструкция: как зарегистрироваться на 1win, пополнить баланс и запустить сигнал бот Mines Helper в Telegram. Полное руководство для новичков.">
 
-  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/logo-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/logo-192.png">
+  <link rel="apple-touch-icon" href="../img/logo-192.png">
+  <meta name="theme-color" content="#000000">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- JS мультиязычности -->
+  <script src="../js/lang.js" defer></script>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header__inner">
-
-      <a href="../index.html" class="logo">Mines Helper</a>
-
-      <div class="lang-switch">
-        <button class="lang-btn lang-btn--active" data-lang="ru">RU</button>
-        <button class="lang-btn" data-lang="tj">TJ</button>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-block">
+        <a href="../index.html" class="logo-link">
+          <img src="../img/logo-32.png" alt="Mines Helper" class="logo-img">
+          <span class="logo-text">Mines Helper</span>
+        </a>
       </div>
 
-      <button class="burger" aria-label="Открыть меню">
-        <span></span><span></span><span></span>
-      </button>
+      <nav class="main-nav">
+        <a href="../index.html" class="nav-link" data-lang="ru">Главная</a>
+        <a href="../index.html" class="nav-link" data-lang="tj">Саҳифаи асосӣ</a>
 
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="../index.html">Главная</a></li>
-          <li><a href="guide.html" class="active">Инструкция</a></li>
-          <li><a href="platform.html">Где играть</a></li>
-          <li><a href="reviews.html">Отзывы</a></li>
-        </ul>
+        <a href="guide.html" class="nav-link" data-lang="ru">Инструкция</a>
+        <a href="guide.html" class="nav-link" data-lang="tj">Дастурамал</a>
+
+        <a href="platform.html" class="nav-link" data-lang="ru">Где играть</a>
+        <a href="platform.html" class="nav-link" data-lang="tj">Куҷо бозӣ кардан</a>
+
+        <a href="reviews.html" class="nav-link" data-lang="ru">Отзывы</a>
+        <a href="reviews.html" class="nav-link" data-lang="tj">Шарҳҳо</a>
       </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button type="button" data-lang-switch="ru" class="lang-btn">RU</button>
+          <button type="button" data-lang-switch="tj" class="lang-btn">TJ</button>
+        </div>
+
+        <button type="button" class="burger" data-burger aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="main">
 
-    <section class="section">
-      <div class="container">
-        <h1 class="page-title">Пошаговая инструкция</h1>
-        <p class="page-subtitle">
-          Следуй шагам ниже, чтобы быстро получить доступ к подсказкам в игре Mines через Telegram-бота.
-        </p>
+  <main>
+    <!-- HERO / заголовок страницы -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 data-lang="ru">Инструкция по запуску Mines Helper</h1>
+          <h1 data-lang="tj">Дастурамал оид ба оғози Mines Helper</h1>
 
-        <!-- STEP 1 -->
-        <div class="guide-step">
-          <h2>1. Открой бота и выбери язык</h2>
-          <p class="step-text">
-            При первом запуске бот предложит выбрать язык интерфейса. Выбери русский или таджикский — любой, на котором тебе удобнее работать.
+          <p data-lang="ru">
+            На этой странице — подробная инструкция, как зарегистрироваться на 1win, пополнить баланс и запустить сигнал
+            бот Mines Helper в Telegram.
           </p>
-          <figure class="guide-figure">
-            <img src="../img/step1.jpg" alt="Шаг 1 — выбор языка" />
-          </figure>
+          <p data-lang="tj">
+            Дар ин саҳифа дастурамали пурра оварда шудааст, ки чӣ гуна дар 1win қайд шудан, балансро пур кардан ва боти
+            сигналии Mines Helper-ро дар Telegram оғоз кардан мумкин аст.
+          </p>
+
+          <p data-lang="ru" class="hero-note">
+            Рекомендуется пройти все шаги по порядку. Это займет несколько минут, но избавит от ошибок дальше.
+          </p>
+          <p data-lang="tj" class="hero-note">
+            Маслиҳат дода мешавад, ки ҳамаи қадамҳоро пайдарпай иҷро кунӣ. Ин чанд дақиқаро мегирад, вале аз хатогиҳои
+            минбаъда пешгирӣ мекунад.
+          </p>
+
+          <div class="hero-actions">
+            <a data-i18n-link class="btn btn-primary" data-lang="ru" href="https://t.me/YOUR_RU_BOT"
+              data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
+              Открыть бота в Telegram
+            </a>
+
+            <a data-i18n-link class="btn btn-primary" data-lang="tj" href="https://t.me/YOUR_TJ_BOT"
+              data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
+              Кушодани бот дар Telegram
+            </a>
+
+            <a href="../index.html" class="btn btn-secondary" data-lang="ru">
+              Вернуться на главную
+            </a>
+            <a href="../index.html" class="btn btn-secondary" data-lang="tj">
+              Бозгашт ба саҳифаи асосӣ
+            </a>
+          </div>
         </div>
 
-        <!-- STEP 2 -->
-        <div class="guide-step">
-          <h2>2. Зарегистрируйся в 1win</h2>
-          <p class="step-text">
-            Бот предложит создать аккаунт 1win. Это обязательный шаг — без регистрации доступ к мини-аппу с подсказками не откроется.
-          </p>
-          <figure class="guide-figure">
-            <img src="../img/step2.jpg" alt="Шаг 2 — регистрация" />
-          </figure>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="guide-step">
-          <h2>3. Внеси депозит</h2>
-          <p class="step-text">
-            Чтобы активировать подсказки, нужно пополнить игровой баланс. Бот сам подскажет, какую кнопку нажать.
-          </p>
-          <figure class="guide-figure">
-            <img src="../img/step3.jpg" alt="Шаг 3 — депозит" />
-          </figure>
-        </div>
-
-        <!-- STEP 4 -->
-        <div class="guide-step">
-          <h2>4. Открой мини-приложение и выбери Mines</h2>
-          <p class="step-text">
-            После депозита жми «Приложение» → выбирай игру Mines. Теперь подсказки будут отображаться в реальном времени по твоей сетке.
-          </p>
-          <figure class="guide-figure">
-            <img src="../img/step4.jpg" alt="Шаг 4 — запуск подсказок" />
-          </figure>
-        </div>
-
-        <!-- VIDEO -->
-        <div class="guide-step">
-          <h2>Видео-руководство (2 минуты)</h2>
-          <p class="step-text">
-            Хочешь посмотреть весь процесс от регистрации до запуска подсказок?
-          </p>
-
-          <a
-            href="https://t.me/mm_work_team/19"
-            target="_blank"
-            rel="noopener"
-            class="btn btn--outline btn--center"
-          >
-            ▶ Смотреть видео
-          </a>
-        </div>
-
-        <!-- SUPPORT -->
-        <div class="guide-step">
-          <p class="step-text">
-            Если что-то непонятно — пиши в поддержку:
-            <a href="https://t.me/MM_helpy" target="_blank" rel="noopener">@MM_helpy</a>
-          </p>
+        <div class="hero-media">
+          <!-- При желании сделаешь свои скрины -->
+          <img data-i18n-img src="../img/guide-ru.png" alt="Инструкция Mines Helper" data-ru-src="../img/guide-ru.png"
+            data-tj-src="../img/guide-tj.png" class="hero-img">
         </div>
       </div>
     </section>
 
+    <!-- Шаги инструкции -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 data-lang="ru">Шаг 1. Открой Mines Helper в Telegram</h2>
+        <h2 data-lang="tj">Қадам 1. Mines Helper-ро дар Telegram кушо</h2>
+
+        <div class="steps-list">
+          <div class="step-row">
+            <h3 data-lang="ru">1. Перейди по ссылке на бота</h3>
+            <h3 data-lang="tj">1. Аз рӯи истинод ба бот гузар</h3>
+
+            <p data-lang="ru">
+              Нажми на кнопку «Открыть бота в Telegram» выше или используй ссылку, которую ты получил от партнёра.
+              Откроется окно Telegram с ботом Mines Helper.
+            </p>
+            <p data-lang="tj">
+              Тугмаи «Кушодани бот дар Telegram»-ро дар боло пахш кун ё истинодеро истифода бар, ки аз шарик гирифтаӣ.
+              Равзанаи Telegram бо боти Mines Helper кушода мешавад.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">2. Нажми Start</h3>
+            <h3 data-lang="tj">2. Тугмаи Start-ро пахш кун</h3>
+
+            <p data-lang="ru">
+              Внизу нажми кнопку <strong>Start</strong>, чтобы запустить диалог с ботом. Если бот уже запущен — этот шаг
+              можно пропустить.
+            </p>
+            <p data-lang="tj">
+              Дар поён тугмаи <strong>Start</strong>-ро пахш кун, то сӯҳбат бо бот оғоз шавад. Агар бот аллакай фаъол
+              бошад — ин қадамро метавон гузаронд.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">3. Выбери язык</h3>
+            <h3 data-lang="tj">3. Забонро интихоб кун</h3>
+
+            <p data-lang="ru">
+              Бот предложит выбрать язык интерфейса (например, русский или таджикский). Выбери тот, на котором тебе
+              проще читать текст и следовать инструкциям.
+            </p>
+            <p data-lang="tj">
+              Бот пешниҳод мекунад, ки забони интерфейсро интихоб кунӣ (масалан, русӣ ё тоҷикӣ). Он забонро интихоб кун,
+              ки хондан ва иҷрои дастурамал барои ту осонтар аст.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 data-lang="ru">Шаг 2. Зарегистрируйся на 1win</h2>
+        <h2 data-lang="tj">Қадам 2. Дар 1win қайд кун</h2>
+
+        <div class="steps-list">
+          <div class="step-row">
+            <h3 data-lang="ru">1. Перейди по ссылке из бота</h3>
+            <h3 data-lang="tj">1. Аз истиноди бот гузар</h3>
+
+            <p data-lang="ru">
+              Внутри бота нажми кнопку вроде «Регистрация 1win» или аналогичную. Бот откроет официальный сайт 1win в
+              браузере.
+            </p>
+            <p data-lang="tj">
+              Дар дохили бот тугмаи «Қайд дар 1win» ё тугмаи монандро пахш кун. Бот сомонаи расмии 1win-ро дар браузер
+              мекушояд.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">2. Заполни форму регистрации</h3>
+            <h3 data-lang="tj">2. Шакли қайдро пур кун</h3>
+
+            <p data-lang="ru">
+              Укажи требуемые данные: телефон или e-mail, пароль и валюту счёта. Проверь, чтобы вся информация была
+              корректной.
+            </p>
+            <p data-lang="tj">
+              Маълумоти заруриро ворид кун: телефон ё e-mail, парол ва асъори ҳисобро. Боварӣ ҳосил кун, ки ҳамаи
+              маълумот дуруст аст.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">3. Подтверди аккаунт</h3>
+            <h3 data-lang="tj">3. Аккаунтро тасдиқ кун</h3>
+
+            <p data-lang="ru">
+              Подтверди регистрацию по SMS или письму, если это потребуется. После этого войди в личный кабинет 1win.
+            </p>
+            <p data-lang="tj">
+              Агар лозим шавад, қайдро тавассути SMS ё паём ба e-mail тасдиқ кун. Баъд аз он ба кабинети шахсии 1win
+              дохил шав.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 data-lang="ru">Шаг 3. Пополни депозит</h2>
+        <h2 data-lang="tj">Қадам 3. Депозитро пур кун</h2>
+
+        <div class="steps-list">
+          <div class="step-row">
+            <h3 data-lang="ru">1. Открой раздел пополнения</h3>
+            <h3 data-lang="tj">1. Қисмати пур кардани балансро кушо</h3>
+
+            <p data-lang="ru">
+              В личном кабинете 1win открой раздел «Касса», «Пополнение» или аналогичный. Там отображаются доступные
+              способы оплаты.
+            </p>
+            <p data-lang="tj">
+              Дар кабинети шахсии 1win қисмати «Касса», «Пур кардани баланс» ё монанд ба онро кушо. Он ҷо ҳамаи роҳҳои
+              пардохт нишон дода мешаванд.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">2. Выбери способ оплаты</h3>
+            <h3 data-lang="tj">2. Тарзи пардохтро интихоб кун</h3>
+
+            <p data-lang="ru">
+              Выбери удобный способ: карта, кошелёк или другой вариант. Следуй инструкции на экране, чтобы завершить
+              платёж.
+            </p>
+            <p data-lang="tj">
+              Роҳи қулайро интихоб кун: корт, ҳамён ё варианти дигар. Дастурамалро дар экран иҷро кун, то пардохт анҷом
+              ёбад.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">3. Определи сумму для теста</h3>
+            <h3 data-lang="tj">3. Маблағи озмоиширо муайян кун</h3>
+
+            <p data-lang="ru">
+              Внеси сумму, с которой готов протестировать игру и подсказки. Не используй деньги, которые не готов
+              потерять.
+            </p>
+            <p data-lang="tj">
+              Он маблағеро гузор, ки бо он омодаӣ бозӣ ва пешниҳодҳоро санҷӣ. Аз маблағе, ки омода нестӣ аз даст диҳӣ,
+              истифода накун.
+            </p>
+          </div>
+        </div>
+
+        <p data-lang="ru" class="hero-note" style="margin-top:16px;">
+          Важно: игра с деньгами всегда связана с риском. Mines Helper не убирает этот риск и не гарантирует прибыль.
+        </p>
+        <p data-lang="tj" class="hero-note" style="margin-top:16px;">
+          Муҳим: бозӣ бо пул ҳамеша бо хатар алоқаманд аст. Mines Helper ин хатарро аз байн намебарад ва даромади
+          кафолатнок намедиҳад.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 data-lang="ru">Шаг 4. Запусти мини-приложение Mines Helper</h2>
+        <h2 data-lang="tj">Қадам 4. Мини-иловаи Mines Helper-ро оғоз кун</h2>
+
+        <div class="steps-list">
+          <div class="step-row">
+            <h3 data-lang="ru">1. Вернись в Telegram-бота</h3>
+            <h3 data-lang="tj">1. Ба боти Telegram баргард</h3>
+
+            <p data-lang="ru">
+              После пополнения депозита вернись в диалог с Mines Helper в Telegram. Если нужно — снова открой бота по
+              ссылке.
+            </p>
+            <p data-lang="tj">
+              Пас аз пур шудани депозит ба сӯҳбат бо Mines Helper дар Telegram баргард. Агар лозим бошад, ботро аз рӯи
+              истинод дубора кушо.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">2. Нажми кнопку «Приложение»</h3>
+            <h3 data-lang="tj">2. Тугмаи «Илова»-ро пахш кун</h3>
+
+            <p data-lang="ru">
+              В интерфейсе бота нажми кнопку «Приложение» или «Open App». Откроется мини-приложение Mines Helper с
+              подсказками.
+            </p>
+            <p data-lang="tj">
+              Дар интерфейси бот тугмаи «Илова» ё «Open App»-ро пахш кун. Мини-иловаи Mines Helper бо пешниҳодҳо кушода
+              мешавад.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">3. Выбери игру Mines</h3>
+            <h3 data-lang="tj">3. Бозии Mines-ро интихоб кун</h3>
+
+            <p data-lang="ru">
+              Внутри мини-приложения выбери игру <strong>Mines</strong>. Интерфейс подсказок подстроится под эту игру.
+            </p>
+            <p data-lang="tj">
+              Дар дохили мини-илова бозии <strong>Mines</strong>-ро интихоб кун. Интерфейси пешниҳодҳо барои ҳамин бозӣ
+              мутобиқ мешавад.
+            </p>
+          </div>
+
+          <div class="step-row">
+            <h3 data-lang="ru">4. Запусти Mines на 1win и играй с подсказками</h3>
+            <h3 data-lang="tj">4. Mines-ро дар 1win кушо ва бо пешниҳодҳо бозӣ кун</h3>
+
+            <p data-lang="ru">
+              Открой Mines на сайте или в приложении 1win и одновременно держи открытым мини-приложение Mines Helper.
+              Смотри, какие клетки отмечены как более безопасные, и принимай решение о клике.
+            </p>
+            <p data-lang="tj">
+              Бозии Mines-ро дар сомона ё замимаи 1win кушо ва ҳамзамон мини-иловаи Mines Helper-ро боз нигоҳ дор.
+              Ба он, ки кадом ҳуҷайраҳо нисбатан бехатар нишон дода шудаанд, нигоҳ кун ва худат қарор гир, ки куҷо клик
+              кунӣ.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <a data-i18n-link class="btn btn-primary" data-lang="ru" href="https://t.me/YOUR_RU_BOT"
+            data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
+            Открыть мини-приложение Mines Helper
+          </a>
+
+          <a data-i18n-link class="btn btn-primary" data-lang="tj" href="https://t.me/YOUR_TJ_BOT"
+            data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
+            Кушодани мини-иловаи Mines Helper
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Мини FAQ внутри инструкции -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 data-lang="ru">Важные замечания</h2>
+        <h2 data-lang="tj">Ёддоштҳои муҳим</h2>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 data-lang="ru">Можно ли пропустить регистрацию или депозит?</h3>
+            <h3 data-lang="tj">Оё метавон бе қайд ё бе депозит истифода бурд?</h3>
+
+            <p data-lang="ru">
+              Нет. Без аккаунта и депозита на 1win ты не сможешь протестировать подсказки в реальной игре. Инструкция
+              рассчитана на полноценный старт.
+            </p>
+            <p data-lang="tj">
+              Не. Бе аккаунт ва депозит дар 1win ту наметавонӣ пешниҳодҳоро дар бозии воқеӣ санҷӣ. Ин дастурамал барои
+              оғози пурра тарҳрезӣ шудааст.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 data-lang="ru">Можно ли играть только по подсказкам?</h3>
+            <h3 data-lang="tj">Оё метавон танҳо бо пешниҳодҳо бозӣ кард?</h3>
+
+            <p data-lang="ru">
+              Решение всегда за тобой. Подсказки помогают структурировать игру, но не заменяют твою голову и не убирают
+              риск.
+            </p>
+            <p data-lang="tj">
+              Қарор ҳамеша аз ту аст. Пешниҳодҳо ба тартиб додани бозӣ кумак мекунанд, аммо ақли туро иваз намекунанд ва
+              хатарро аз байн намебаранд.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Mines Helper</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-lang="ru" class="footer-text">
+        Mines Helper не является казино или платёжным сервисом. Это инструмент подсказок для игры Mines на сторонних
+        платформах. Игра с деньгами всегда связана с риском. Не играй на деньги, которые не готов потерять.
+      </p>
+      <p data-lang="tj" class="footer-text">
+        Mines Helper казино ё хидмати пардохт нест. Ин воситаи пешниҳодҳо барои бозии Mines дар платформаҳои дигар аст.
+        Бозӣ бо пул ҳамеша бо хатар алоқаманд аст. Бо маблағе, ки омода нестӣ аз даст диҳӣ, бозӣ накун.
+      </p>
     </div>
   </footer>
-
-  <script src="../js/main.js"></script>
 </body>
+
 </html>

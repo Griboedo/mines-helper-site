@@ -1,129 +1,305 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Отзывы — Mines Helper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ59P95EE7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YJ59P95EE7');
-  </script>
+  <!-- SEO -->
+  <title>Отзывы о Mines Helper — реальные примеры и скриншоты</title>
+  <meta name="description"
+    content="Отзывы пользователей о Mines Helper: скриншоты, короткие истории и пояснения. Это не гарантия дохода, а реальные примеры того, как люди используют подсказки в игре Mines.">
 
-  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/logo-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/logo-192.png">
+  <link rel="apple-touch-icon" href="../img/logo-192.png">
+  <meta name="theme-color" content="#000000">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- JS мультиязычности -->
+  <script src="../js/lang.js" defer></script>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header__inner">
-
-      <a href="../index.html" class="logo">Mines Helper</a>
-
-      <div class="lang-switch">
-        <button class="lang-btn lang-btn--active" data-lang="ru">RU</button>
-        <button class="lang-btn" data-lang="tj">TJ</button>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-block">
+        <a href="../index.html" class="logo-link">
+          <img src="../img/logo-32.png" alt="Mines Helper" class="logo-img">
+          <span class="logo-text">Mines Helper</span>
+        </a>
       </div>
 
-      <button class="burger" aria-label="Открыть меню">
-        <span></span><span></span><span></span>
-      </button>
+      <nav class="main-nav">
+        <a href="../index.html" class="nav-link" data-lang="ru">Главная</a>
+        <a href="../index.html" class="nav-link" data-lang="tj">Саҳифаи асосӣ</a>
 
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="../index.html">Главная</a></li>
-          <li><a href="guide.html">Инструкция</a></li>
-          <li><a href="platform.html">Где играть</a></li>
-          <li><a href="reviews.html" class="active">Отзывы</a></li>
-        </ul>
+        <a href="guide.html" class="nav-link" data-lang="ru">Инструкция</a>
+        <a href="guide.html" class="nav-link" data-lang="tj">Дастурамал</a>
+
+        <a href="platform.html" class="nav-link" data-lang="ru">Где играть</a>
+        <a href="platform.html" class="nav-link" data-lang="tj">Куҷо бозӣ кардан</a>
+
+        <a href="reviews.html" class="nav-link" data-lang="ru">Отзывы</a>
+        <a href="reviews.html" class="nav-link" data-lang="tj">Шарҳҳо</a>
       </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button type="button" data-lang-switch="ru" class="lang-btn">RU</button>
+          <button type="button" data-lang-switch="tj" class="lang-btn">TJ</button>
+        </div>
+
+        <button type="button" class="burger" data-burger aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="main">
-    <section class="section">
-      <div class="container">
-        <h1 class="page-title">Отзывы</h1>
-        <p class="page-subtitle">
-          Ниже — скриншоты переписок и результатов. Остальные примеры и истории — в Telegram-канале.
-        </p>
 
-        <!-- CTA НАД СЛАЙДЕРОМ -->
-        <div class="reviews-cta">
-          <a
-            href="https://t.me/mm_work_team"
-            target="_blank"
-            rel="noopener"
-            class="btn btn--outline"
-          >
-            Смотреть больше отзывов в Telegram
-          </a>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 data-lang="ru">Отзывы о Mines Helper</h1>
+          <h1 data-lang="tj">Шарҳҳо дар бораи Mines Helper</h1>
 
-          <a
-            href="https://t.me/MM_helpy"
-            target="_blank"
-            rel="noopener"
-            class="btn"
-          >
-            Написать в поддержку
-          </a>
+          <p data-lang="ru">
+            Здесь собраны скриншоты и короткие истории пользователей, которые уже тестировали подсказки Mines Helper в
+            игре Mines.
+            Это не обещание дохода и не гарантия результата, а реальные примеры использования инструмента.
+          </p>
+          <p data-lang="tj">
+            Дар ин ҷо скриншотҳо ва қиссаҳои кӯтоҳи корбароне ҷамъ оварда шудаанд, ки аллакай пешниҳоди Mines Helper-ро
+            дар бозии Mines санҷидаанд.
+            Ин на ваъдаи даромад аст ва на кафолати натиҷа, балки мисолҳои воқеии истифодаи восита мебошанд.
+          </p>
+
+          <p data-lang="ru" class="hero-note">
+            Важно помнить: даже если кто-то показал хороший результат, это не значит, что у каждого будет так же. Игра с
+            деньгами всегда связана с риском.
+          </p>
+          <p data-lang="tj" class="hero-note">
+            Муҳим аст дар хотир дошта бошӣ: ҳатто агар касе натиҷаи хуб нишон дода бошад, ин маънои онро надорад, ки дар
+            ҳар ҳол чунин мешавад. Бозӣ бо пул ҳамеша бо хатар алоқаманд аст.
+          </p>
+
+          <div class="hero-actions">
+            <a data-i18n-link class="btn btn-primary" data-lang="ru" href="https://t.me/YOUR_RU_BOT"
+              data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
+              Перейти к боту в Telegram
+            </a>
+
+            <a data-i18n-link class="btn btn-primary" data-lang="tj" href="https://t.me/YOUR_TJ_BOT"
+              data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
+              Гузаштан ба бот дар Telegram
+            </a>
+
+            <a href="guide.html" class="btn btn-secondary" data-lang="ru">
+              Посмотреть инструкцию
+            </a>
+            <a href="guide.html" class="btn btn-secondary" data-lang="tj">
+              Дастурамалро хонед
+            </a>
+          </div>
         </div>
 
-        <!-- СЛАЙДЕР ОТЗЫВОВ -->
-        <div class="reviews-slider" data-reviews-slider>
-          <button
-            class="slider-arrow slider-arrow--prev"
-            data-slider-prev
-            aria-label="Предыдущий отзыв"
-          >
-            &#10094;
-          </button>
+        <div class="hero-media">
+          <img data-i18n-img src="../img/reviews-ru.png" alt="Отзывы о Mines Helper" data-ru-src="../img/reviews-ru.png"
+            data-tj-src="../img/reviews-tj.png" class="hero-img">
+        </div>
+      </div>
+    </section>
 
-          <div class="reviews-track" data-reviews-track>
-            <div class="review-slide">
-              <img src="../img/review-1.jpg" alt="Отзыв 1" />
-            </div>
-            <div class="review-slide">
-              <img src="../img/review-2.jpg" alt="Отзыв 2" />
-            </div>
-            <div class="review-slide">
-              <img src="../img/review-3.jpg" alt="Отзыв 3" />
-            </div>
-            <div class="review-slide">
-              <img src="../img/review-4.jpg" alt="Отзыв 4" />
-            </div>
-            <div class="review-slide">
-              <img src="../img/review-5.jpg" alt="Отзыв 5" />
-            </div>
-            <div class="review-slide">
-              <img src="../img/review-6.jpg" alt="Отзыв 6" />
-            </div>
+    <!-- Текстовые отзывы -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 data-lang="ru">Короткие истории пользователей</h2>
+        <h2 data-lang="tj">Қиссаҳои кӯтоҳи корбарон</h2>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <h3 data-lang="ru">«Перестал кликать наугад»</h3>
+            <h3 data-lang="tj">«Дигар ба таври тасодуфӣ клик намекунам»</h3>
+
+            <p data-lang="ru">
+              Использую Mines Helper, когда играю вечером. Раньше просто тыкал куда попало, сейчас хотя бы есть какая-то
+              логика, где открывать.
+              Да, всё равно бывают минусы, но нервов стало меньше.
+            </p>
+            <p data-lang="tj">
+              Вақте ки бегоҳӣ бозӣ мекунам, Mines Helper-ро истифода мебарам. Пештар ҳуҷайраҳоро тасодуфӣ мекушодам,
+              ҳоло бошад, ақаллан мантиқе ҳаст, ки куҷоро кушодан лозим.
+              Ҳа, боз ҳам бохт мешавад, лекин асабам камтар хароб мешавад.
+            </p>
           </div>
 
-          <button
-            class="slider-arrow slider-arrow--next"
-            data-slider-next
-            aria-label="Следующий отзыв"
-          >
-            &#10095;
-          </button>
+          <div class="benefit-card">
+            <h3 data-lang="ru">«Сделал x3 к депозиту за вечер»</h3>
+            <h3 data-lang="tj">«Бегоҳиро бо x3 ба охир расондам»</h3>
 
-          <div class="slider-dots" data-slider-dots></div>
+            <p data-lang="ru">
+              В первый день залил небольшой депозит «на тест». Играя по подсказкам, смог сделать x3 к стартовой сумме.
+              Понимаю, что так будет не всегда, но для начала результат порадовал.
+            </p>
+            <p data-lang="tj">
+              Рӯзи аввал барои «озмоиш» депозитҳои хурд гузоштам. Ҳангоми бозӣ аз рӯи пешниҳодҳо тавонистам депозити
+              аввалияро ба x3 расонам.
+              Медонам, ки ҳамеша чунин намешавад, вале барои оғози кор натиҷа хурсандкунанда буд.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h3 data-lang="ru">«Помогло успокоиться»</h3>
+            <h3 data-lang="tj">«Ба ором шудан кумак кард»</h3>
+
+            <p data-lang="ru">
+              Для меня главное — что есть ощущение контроля. Когда просто играешь в Mines, хочется отыграться и
+              начинаешь творить фигню.
+              С подсказками легче остановиться и играть по шагам.
+            </p>
+            <p data-lang="tj">
+              Барои ман муҳимаш эҳсоси назорат аст. Вақте танҳо дар Mines бозӣ мекунӣ, мехоҳӣ «бозпас гирӣ» ва сар
+              мекунӣ кори бемаънӣ кардан.
+              Бо пешниҳодҳо осонтар мешавад, ки худатро нигоҳ дорӣ ва қадам ба қадам бозӣ кунӣ.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h3 data-lang="ru">«Подходит для новичков»</h3>
+            <h3 data-lang="tj">«Барои навкорон мувофиқ аст»</h3>
+
+            <p data-lang="ru">
+              Никогда до этого не играл в Mines. По инструкции разобрался за 10 минут, что делать.
+              Без подсказок точно бы слил всё намного быстрее.
+            </p>
+            <p data-lang="tj">
+              То ин вақт ҳеҷ гоҳ дар Mines бозӣ накарда будам. Тибқи дастурамал дар 10 дақиқа фаҳмидам, ки чӣ кор кардан
+              лозим аст.
+              Бе пешниҳодҳо мутмаин ҳастам, ки пулҳоро тезтар аз даст медодам.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Галерея скриншотов -->
+    <section class="section">
+      <div class="container">
+        <h2 data-lang="ru">Скриншоты отзывов и результатов</h2>
+        <h2 data-lang="tj">Скриншотҳои шарҳҳо ва натиҷаҳо</h2>
+
+        <p data-lang="ru">
+          Ниже можно разместить скриншоты переписок из Telegram, истории с результатами игр и другие доказательства
+          того,
+          что люди действительно используют Mines Helper. Рекомендуется периодически обновлять этот блок.
+        </p>
+        <p data-lang="tj">
+          Дар поён метавон скриншотҳои сӯҳбатҳо аз Telegram, натиҷаҳои бозиҳо ва дигар далелҳоро ҷойгир кард,
+          ки нишон медиҳанд, ки мардум воқеан Mines Helper-ро истифода мебаранд. Маслиҳат дода мешавад, ки ин блокро
+          гоҳ-гоҳ нав кунӣ.
+        </p>
+
+        <!-- Галерея: просто сетка из картинок -->
+        <div class="reviews-grid">
+          <!-- Примеры. Замени src на реальные файлы: review-1.png, review-2.png и т.д. -->
+          <figure class="review-card">
+            <img src="../img/review-1.png" alt="Скриншот отзыва 1">
+            <figcaption data-lang="ru">«Спасибо за подсказки, нормально поднял на Mines»</figcaption>
+            <figcaption data-lang="tj">«Ташаккур барои пешниҳодҳо, дар Mines бад набозӣ кардам»</figcaption>
+          </figure>
+
+          <figure class="review-card">
+            <img src="../img/review-2.png" alt="Скриншот отзыва 2">
+            <figcaption data-lang="ru">«Стало меньше эмоций, играю спокойнее»</figcaption>
+            <figcaption data-lang="tj">«Эҳсосотам камтар шуд, оромтар бозӣ мекунам»</figcaption>
+          </figure>
+
+          <figure class="review-card">
+            <img src="../img/review-3.png" alt="Скриншот отзыва 3">
+            <figcaption data-lang="ru">«Есть и минусы, но в целом доволен форматом»</figcaption>
+            <figcaption data-lang="tj">«Бохт ҳам мешавад, вале аз формати кор розӣ ҳастам»</figcaption>
+          </figure>
+
+          <figure class="review-card">
+            <img src="../img/review-4.png" alt="Скриншот отзыва 4">
+            <figcaption data-lang="ru">«Главное — не играть на последние деньги»</figcaption>
+            <figcaption data-lang="tj">«Муҳимаш — бо пулҳои охирин бозӣ накунӣ»</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-cta">
+          <a data-i18n-link class="btn btn-primary" data-lang="ru" href="https://t.me/YOUR_RU_BOT"
+            data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
+            Смотреть больше примеров в Telegram
+          </a>
+
+          <a data-i18n-link class="btn btn-primary" data-lang="tj" href="https://t.me/YOUR_TJ_BOT"
+            data-ru-href="https://t.me/YOUR_RU_BOT" data-tj-href="https://t.me/YOUR_TJ_BOT">
+            Дидани мисолҳои бештар дар Telegram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок с важным дисклеймером -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 data-lang="ru">Важно понимать про отзывы</h2>
+        <h2 data-lang="tj">Дар бораи шарҳҳо чӣ бояд фаҳмид</h2>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 data-lang="ru">Каждый отзыв — это личный опыт</h3>
+            <h3 data-lang="tj">Ҳар як шарҳ — таҷрибаи шахсӣ аст</h3>
+
+            <p data-lang="ru">
+              То, что один человек показал хороший результат, не гарантирует, что у тебя будет так же.
+              Отзывы помогают понять, как люди используют инструмент, но не являются обещанием дохода.
+            </p>
+            <p data-lang="tj">
+              Он ки як нафар натиҷаи хуб нишон додааст, кафолат намедиҳад, ки дар ту ҳам ҳамин тавр мешавад.
+              Шарҳҳо танҳо нишон медиҳанд, ки одамон воситаро чӣ гуна истифода мебаранд, аммо ваъдаи даромад нестанд.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 data-lang="ru">Риск в игре остаётся всегда</h3>
+            <h3 data-lang="tj">Хатар дар бозӣ ҳамеша мемонад</h3>
+
+            <p data-lang="ru">
+              Mines Helper не убирает риск и не превращает игру в «способ заработка». Это инструмент, который помогает
+              уменьшить хаос и играть более осознанно.
+            </p>
+            <p data-lang="tj">
+              Mines Helper хатарро аз байн намебарад ва бозиро ба «роҳи даромад» табдил намедиҳад.
+              Ин восита танҳо ба кам кардани бетартибӣ ва бозии огоҳона кумак мекунад.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Mines Helper</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-lang="ru" class="footer-text">
+        Mines Helper не является казино или платёжным сервисом. Это инструмент подсказок для игры Mines на сторонних
+        платформах. Игра с деньгами всегда связана с риском. Не играй на деньги, которые не готов потерять.
+      </p>
+      <p data-lang="tj" class="footer-text">
+        Mines Helper казино ё хидмати пардохт нест. Ин воситаи пешниҳодҳо барои бозии Mines дар платформаҳои дигар аст.
+        Бозӣ бо пул ҳамеша бо хатар алоқаманд аст. Бо маблағе, ки омода нестӣ аз даст диҳӣ, бозӣ накун.
+      </p>
     </div>
   </footer>
-
-  <script src="../js/main.js"></script>
 </body>
+
 </html>
