@@ -652,8 +652,13 @@ img {
   background: rgba(34, 197, 94, 0.2);
 }
 
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
 
 /* Точки */
 
