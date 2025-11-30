@@ -5,15 +5,24 @@
   const DEFAULT_LANG = "ru";
 
   function getInitialLang() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlLang = urlParams.get("lang");
-    const savedLang = localStorage.getItem("siteLang");
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get("lang");
+  const savedLang = localStorage.getItem("siteLang");
 
-    if (urlLang && SUPPORTED_LANGS.includes(urlLang)) return urlLang;
-    if (savedLang && SUPPORTED_LANGS.includes(savedLang)) return savedLang;
+  // 1) Если есть ?lang=... в URL
+  if (urlLang && SUPPORTED_LANGS.includes(urlLang)) return urlLang;
 
-    return DEFAULT_LANG;
-  }
+  // 2) Если пользователь уже выбирал язык
+  if (savedLang && SUPPORTED_LANGS.includes(savedLang)) return savedLang;
+
+  // 3) Если мы на таджикской версии сайта (/tj/...), делаем язык по умолчанию TJ
+  const path = window.location.pathname || "";
+  if (path.startsWith("/tj")) return "tj";
+
+  // 4) В остальных случаях — русский
+  return DEFAULT_LANG;
+}
+
 
   function setLang(lang) {
     if (!SUPPORTED_LANGS.includes(lang)) lang = DEFAULT_LANG;

@@ -1,32 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Главная RU -->
   <url>
     <loc>https://minesbot.net/</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://minesbot.net/"/>
+    <xhtml:link rel="alternate" hreflang="tg" href="https://minesbot.net/tj/"/>
     <priority>1.0</priority>
   </url>
 
+  <!-- Главная TJ -->
   <url>
-    <loc>https://minesbot.net/pages/guide.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://minesbot.net/tj/</loc>
+    <xhtml:link rel="alternate" hreflang="tg" href="https://minesbot.net/tj/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://minesbot.net/"/>
     <priority>0.9</priority>
   </url>
 
+  <!-- Guide RU -->
   <url>
-    <loc>https://minesbot.net/pages/platform.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://minesbot.net/pages/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://minesbot.net/pages/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="tg" href="https://minesbot.net/tj/pages/guide.html"/>
   </url>
 
+  <!-- Guide TJ -->
+  <url>
+    <loc>https://minesbot.net/tj/pages/guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="tg" href="https://minesbot.net/tj/pages/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://minesbot.net/pages/guide.html"/>
+  </url>
+
+  <!-- Platform RU -->
+  <url>
+    <loc>https://minesbot.net/pages/platform.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://minesbot.net/pages/platform.html"/>
+    <xhtml:link rel="alternate" hreflang="tg" href="https://minesbot.net/tj/pages/platform.html"/>
+  </url>
+
+  <!-- Platform TJ -->
+  <url>
+    <loc>https://minesbot.net/tj/pages/platform.html</loc>
+    <xhtml:link rel="alternate" hreflang="tg" href="https://minesbot.net/tj/pages/platform.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://minesbot.net/pages/platform.html"/>
+  </url>
+
+  <!-- Reviews RU -->
   <url>
     <loc>https://minesbot.net/pages/reviews.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://minesbot.net/pages/reviews.html"/>
+    <xhtml:link rel="alternate" hreflang="tg" href="https://minesbot.net/tj/pages/reviews.html"/>
+  </url>
+
+  <!-- Reviews TJ -->
+  <url>
+    <loc>https://minesbot.net/tj/pages/reviews.html</loc>
+    <xhtml:link rel="alternate" hreflang="tg" href="https://minesbot.net/tj/pages/reviews.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://minesbot.net/pages/reviews.html"/>
   </url>
 
 </urlset>
