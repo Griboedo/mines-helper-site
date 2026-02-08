@@ -1,97 +1,204 @@
-// js/lang.js
+﻿(function () {
+  const SUPPORTED_LANGS = ["ru", "tj", "uz", "en"];
+  const LANG_META = {
+    ru: { name: "Русский", short: "RU", flagSrc: "/img/flags/ru.svg" },
+    tj: { name: "Тоҷикӣ", short: "TJ", flagSrc: "/img/flags/tj.svg" },
+    uz: { name: "O'zbekcha", short: "UZ", flagSrc: "/img/flags/uz.svg" },
+    en: { name: "English", short: "EN", flagSrc: "/img/flags/en.svg" },
+  };
 
-(function () {
-  const SUPPORTED_LANGS = ["ru", "tj"];
-  const DEFAULT_LANG = "ru";
+  function buildPath(lang, slug) {
+    const base = lang === "ru" ? "" : `/${lang}`;
+    if (slug === "index") {
+      return base ? `${base}/` : "/";
+    }
+    return `${base}/pages/${slug}.html`;
+  }
 
-  function getInitialLang() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const urlLang = urlParams.get("lang");
-  const savedLang = localStorage.getItem("siteLang");
-
-  // 1) Если есть ?lang=... в URL
-  if (urlLang && SUPPORTED_LANGS.includes(urlLang)) return urlLang;
-
-  // 2) Если пользователь уже выбирал язык
-  if (savedLang && SUPPORTED_LANGS.includes(savedLang)) return savedLang;
-
-  // 3) Если мы на таджикской версии сайта (/tj/...), делаем язык по умолчанию TJ
-  const path = window.location.pathname || "";
-  if (path.startsWith("/tj")) return "tj";
-
-  // 4) В остальных случаях — русский
-  return DEFAULT_LANG;
-}
-
-
-  function setLang(lang) {
-    if (!SUPPORTED_LANGS.includes(lang)) lang = DEFAULT_LANG;
-
-    document.documentElement.setAttribute("lang", lang);
-    localStorage.setItem("siteLang", lang);
-
-    // Переключаем текстовые блоки
-    document.querySelectorAll("[data-lang]").forEach(function (el) {
-      if (el.getAttribute("data-lang") === lang) {
-        el.style.display = "";
-      } else {
-        el.style.display = "none";
+  function getLangMeta(lang) {
+    return (
+      LANG_META[lang] || {
+        name: lang.toUpperCase(),
+        short: lang.toUpperCase(),
+        flagSrc: "",
       }
-    });
+    );
+  }
 
-    // Переключаем картинки
-    document.querySelectorAll("[data-i18n-img]").forEach(function (img) {
-      const data = img.dataset;
-      const attr = lang + "Src"; // ruSrc / tjSrc
-      const newSrc = data[attr];
-      if (newSrc) img.src = newSrc;
-    });
-
-    // Переключаем ссылки
-    document.querySelectorAll("[data-i18n-link]").forEach(function (a) {
-      const data = a.dataset;
-      const attr = lang + "Href"; // ruHref / tjHref
-      const newHref = data[attr];
-      if (newHref) a.href = newHref;
-    });
-
-    // Подсветка активной кнопки языка
-    document.querySelectorAll("[data-lang-switch]").forEach(function (btn) {
-      if (btn.getAttribute("data-lang-switch") === lang) {
-        btn.classList.add("lang-active");
-      } else {
-        btn.classList.remove("lang-active");
+  function closeLanguageMenus(exceptSwitcher) {
+    document.querySelectorAll(".lang-switcher.lang-open").forEach((switcher) => {
+      if (exceptSwitcher && switcher === exceptSwitcher) return;
+      switcher.classList.remove("lang-open");
+      const trigger = switcher.querySelector(".lang-current");
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", "false");
       }
     });
   }
 
-  function initLang() {
-    const initialLang = getInitialLang();
-    setLang(initialLang);
+  function createLanguageOption(lang, pageSlug) {
+    const meta = getLangMeta(lang);
 
-    document.querySelectorAll("[data-lang-switch]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        const lang = btn.getAttribute("data-lang-switch");
-        setLang(lang);
-      });
+    const link = document.createElement("a");
+    link.className = "lang-btn lang-option";
+    link.href = buildPath(lang, pageSlug);
+    link.dataset.switchLang = lang;
+    link.setAttribute("role", "menuitem");
+
+    const main = document.createElement("span");
+    main.className = "lang-option-main";
+
+    const flag = document.createElement("img");
+    flag.className = "lang-option-flag";
+    flag.setAttribute("aria-hidden", "true");
+    flag.alt = "";
+    flag.loading = "lazy";
+    flag.decoding = "async";
+    flag.src = meta.flagSrc || "";
+
+    const label = document.createElement("span");
+    label.className = "lang-option-label";
+    label.textContent = meta.name;
+
+    const check = document.createElement("span");
+    check.className = "lang-option-check";
+    check.setAttribute("aria-hidden", "true");
+    check.textContent = "✓";
+
+    main.append(flag, label);
+    link.append(main, check);
+
+    return link;
+  }
+
+  function buildLanguageDropdown(switcher, pageSlug) {
+    if (switcher.dataset.dropdownReady === "1") return;
+
+    const existingLinks = Array.from(
+      switcher.querySelectorAll("[data-switch-lang]")
+    )
+      .map((node) => node.getAttribute("data-switch-lang"))
+      .filter((lang) => SUPPORTED_LANGS.includes(lang));
+
+    const langs = existingLinks.length
+      ? SUPPORTED_LANGS.filter((lang) => existingLinks.includes(lang))
+      : SUPPORTED_LANGS.slice();
+
+    switcher.innerHTML = "";
+
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "lang-current";
+    trigger.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.setAttribute("aria-label", "Language selection");
+
+    const triggerFlag = document.createElement("img");
+    triggerFlag.className = "lang-current-flag";
+    triggerFlag.dataset.langCurrentFlag = "";
+    triggerFlag.setAttribute("aria-hidden", "true");
+    triggerFlag.alt = "";
+    triggerFlag.decoding = "async";
+
+    const triggerLabel = document.createElement("span");
+    triggerLabel.className = "lang-current-label";
+    triggerLabel.dataset.langCurrentLabel = "";
+
+    const triggerShort = document.createElement("span");
+    triggerShort.className = "lang-current-short";
+    triggerShort.dataset.langCurrentShort = "";
+
+    const triggerCaret = document.createElement("span");
+    triggerCaret.className = "lang-current-caret";
+    triggerCaret.setAttribute("aria-hidden", "true");
+    triggerCaret.textContent = "▼";
+
+    trigger.append(triggerFlag, triggerLabel, triggerShort, triggerCaret);
+
+    const menu = document.createElement("div");
+    menu.className = "lang-menu";
+    menu.setAttribute("role", "menu");
+
+    langs.forEach((lang) => {
+      menu.appendChild(createLanguageOption(lang, pageSlug));
     });
+
+    switcher.append(trigger, menu);
+    switcher.dataset.dropdownReady = "1";
+
+    trigger.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const willOpen = !switcher.classList.contains("lang-open");
+      closeLanguageMenus(switcher);
+      switcher.classList.toggle("lang-open", willOpen);
+      trigger.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    });
+
+    menu.addEventListener("click", () => {
+      switcher.classList.remove("lang-open");
+      trigger.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function setLanguageDropdownState(switcher, currentLang, pageSlug) {
+    const triggerFlag = switcher.querySelector("[data-lang-current-flag]");
+    const triggerLabel = switcher.querySelector("[data-lang-current-label]");
+    const triggerShort = switcher.querySelector("[data-lang-current-short]");
+    const meta = getLangMeta(currentLang);
+
+    if (triggerFlag) triggerFlag.src = meta.flagSrc || "";
+    if (triggerLabel) triggerLabel.textContent = meta.name;
+    if (triggerShort) triggerShort.textContent = meta.short;
+
+    switcher.querySelectorAll("[data-switch-lang]").forEach((link) => {
+      const lang = link.getAttribute("data-switch-lang");
+      if (!SUPPORTED_LANGS.includes(lang)) return;
+
+      link.setAttribute("href", buildPath(lang, pageSlug));
+      link.classList.toggle("lang-active", lang === currentLang);
+    });
+  }
+
+  function initLanguageSwitcher() {
+    const body = document.body;
+    if (!body) return;
+
+    const currentLang = body.dataset.currentLang || "ru";
+    const pageSlug = body.dataset.pageSlug || "index";
+
+    document.querySelectorAll(".lang-switcher").forEach((switcher) => {
+      buildLanguageDropdown(switcher, pageSlug);
+      setLanguageDropdownState(switcher, currentLang, pageSlug);
+    });
+
+    if (body.dataset.langDropdownGlobalReady !== "1") {
+      document.addEventListener("click", () => {
+        closeLanguageMenus(null);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeLanguageMenus(null);
+        }
+      });
+
+      body.dataset.langDropdownGlobalReady = "1";
+    }
   }
 
   function initBurger() {
     const burger = document.querySelector("[data-burger]");
     const nav = document.querySelector(".main-nav");
-
     if (!burger || !nav) return;
 
-    burger.addEventListener("click", function () {
+    burger.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("main-nav-open");
       burger.classList.toggle("burger-open", isOpen);
       document.body.classList.toggle("nav-open", isOpen);
     });
 
-    // Закрывать меню при клике по пункту
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
+    nav.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
         nav.classList.remove("main-nav-open");
         burger.classList.remove("burger-open");
         document.body.classList.remove("nav-open");
@@ -99,61 +206,223 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    initLang();
-    initBurger();
-  });
+  function normalizePath(path) {
+    if (!path) return "";
+    let normalized = path.trim();
 
-  /* ===========================
-   SLIDER LOGIC
-   =========================== */
+    try {
+      const parsed = new URL(normalized, window.location.origin);
+      normalized = parsed.pathname || "/";
+    } catch (error) {
+      return normalized;
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.getElementById("reviewSlider");
-  if (!slider) return;
+    if (normalized.length > 1 && normalized.endsWith("/")) {
+      normalized = normalized.slice(0, -1);
+    }
 
-  const track = slider.querySelector(".slider-track");
-  const slides = Array.from(slider.querySelectorAll(".slide"));
-  const btnPrev = slider.querySelector("[data-slider-prev]");
-  const btnNext = slider.querySelector("[data-slider-next]");
-  const dotsContainer = slider.querySelector("[data-slider-dots]");
+    return normalized.toLowerCase();
+  }
 
-  let index = 0;
+  function initActiveNavLink() {
+    const body = document.body;
+    if (!body) return;
 
-  function renderDots() {
-    dotsContainer.innerHTML = "";
-    slides.forEach((_, i) => {
-      const dot = document.createElement("button");
-      if (i === index) dot.classList.add("active");
-      dot.addEventListener("click", () => goTo(i));
-      dotsContainer.appendChild(dot);
+    const currentLang = body.dataset.currentLang || "ru";
+    const pageSlug = body.dataset.pageSlug || "index";
+    const expectedPath = normalizePath(buildPath(currentLang, pageSlug));
+    if (!expectedPath) return;
+
+    document.querySelectorAll(".main-nav .nav-link").forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      const isActive = normalizePath(href) === expectedPath;
+      link.classList.toggle("active", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
     });
   }
 
-  function goTo(i) {
-    index = (i + slides.length) % slides.length;
-    track.style.transform = `translateX(${-index * 100}%)`;
-    renderDots();
+  function initMobileHeaderMetrics() {
+    const root = document.documentElement;
+    const header = document.querySelector(".site-header");
+    if (!root || !header) return;
+
+    const update = () => {
+      const height = Math.ceil(header.getBoundingClientRect().height);
+      if (height > 0) {
+        root.style.setProperty("--header-mobile-height", `${height}px`);
+      }
+    };
+
+    update();
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
   }
 
-  btnPrev.addEventListener("click", () => goTo(index - 1));
-  btnNext.addEventListener("click", () => goTo(index + 1));
+  function getLocalizedAttr(element, baseAttr, lang) {
+    return (
+      element.getAttribute(`${baseAttr}-${lang}`) ||
+      element.getAttribute(`${baseAttr}-default`) ||
+      ""
+    );
+  }
 
-  renderDots();
+  function initLocalizedMedia() {
+    const body = document.body;
+    if (!body) return;
 
-  /* ===== SWIPE ===== */
-  let startX = 0;
+    const currentLang = body.dataset.currentLang || "ru";
 
-  track.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
+    document.querySelectorAll("[data-i18n-src]").forEach((element) => {
+      const localizedSrc = getLocalizedAttr(element, "data-i18n-src", currentLang);
+      if (localizedSrc) {
+        element.setAttribute("src", localizedSrc);
+      }
+    });
 
-  track.addEventListener("touchend", (e) => {
-    let dx = e.changedTouches[0].clientX - startX;
-    if (Math.abs(dx) > 40) {
-      if (dx < 0) goTo(index + 1);
-      else goTo(index - 1);
+    document.querySelectorAll("[data-i18n-srcset]").forEach((element) => {
+      const localizedSrcset = getLocalizedAttr(
+        element,
+        "data-i18n-srcset",
+        currentLang
+      );
+      if (localizedSrcset) {
+        element.setAttribute("srcset", localizedSrcset);
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+      const localizedAlt = getLocalizedAttr(element, "data-i18n-alt", currentLang);
+      if (localizedAlt) {
+        element.setAttribute("alt", localizedAlt);
+      }
+    });
+  }
+
+  function initReviewsSlider() {
+    const slider = document.querySelector("[data-reviews-slider]");
+    if (!slider) return;
+    if (slider.dataset.sliderReady === "1") return;
+    slider.dataset.sliderReady = "1";
+
+    const track = slider.querySelector("[data-reviews-track]");
+    const prevBtn = slider.querySelector("[data-slider-prev]");
+    const nextBtn = slider.querySelector("[data-slider-next]");
+    const dotsContainer = slider.querySelector("[data-slider-dots]");
+    if (!track) return;
+
+    const slides = Array.from(track.querySelectorAll(".slide"));
+    if (!slides.length) return;
+
+    let index = 0;
+    const dots = [];
+    let counter = slider.querySelector("[data-slider-counter]");
+    const currentLang = document.body?.dataset.currentLang || "en";
+    const dotWordMap = {
+      ru: "Слайд",
+      tj: "Слайд",
+      uz: "Slayd",
+      en: "Slide",
+    };
+    const dotWord = dotWordMap[currentLang] || "Slide";
+
+    function render() {
+      const slideWidth = slider.clientWidth;
+      track.style.transform = `translate3d(${-index * slideWidth}px, 0, 0)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+      if (counter) {
+        counter.textContent = `${index + 1} / ${slides.length}`;
+      }
     }
+
+    function goTo(nextIndex) {
+      if (nextIndex < 0) nextIndex = slides.length - 1;
+      if (nextIndex >= slides.length) nextIndex = 0;
+      index = nextIndex;
+      render();
+    }
+
+    if (dotsContainer) {
+      dotsContainer.innerHTML = "";
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `${dotWord} ${i + 1}`);
+        dot.addEventListener("click", () => goTo(i));
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+      });
+    }
+
+    if (!counter) {
+      counter = document.createElement("div");
+      counter.className = "slider-counter";
+      counter.dataset.sliderCounter = "";
+      slider.appendChild(counter);
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => goTo(index - 1));
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => goTo(index + 1));
+    }
+
+    slider.setAttribute("tabindex", "0");
+    slider.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        goTo(index - 1);
+      }
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        goTo(index + 1);
+      }
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    slider.addEventListener(
+      "touchstart",
+      (event) => {
+        const touch = event.changedTouches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+      },
+      { passive: true }
+    );
+
+    slider.addEventListener(
+      "touchend",
+      (event) => {
+        const touch = event.changedTouches[0];
+        const dx = touch.clientX - touchStartX;
+        const dy = touch.clientY - touchStartY;
+
+        if (Math.abs(dx) < 40 || Math.abs(dx) <= Math.abs(dy)) return;
+        if (dx < 0) goTo(index + 1);
+        if (dx > 0) goTo(index - 1);
+      },
+      { passive: true }
+    );
+
+    window.addEventListener("resize", render);
+
+    render();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initLanguageSwitcher();
+    initActiveNavLink();
+    initBurger();
+    initMobileHeaderMetrics();
+    initLocalizedMedia();
+    initReviewsSlider();
   });
-});
 })();

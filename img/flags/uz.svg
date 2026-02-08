@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="c">
+      <circle cx="9" cy="9" r="9"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="18" height="18" fill="#fff"/>
+    <rect width="18" height="5.7" fill="#19a6e2"/>
+    <rect y="6.7" width="18" height=".9" fill="#d8343a"/>
+    <rect y="10.4" width="18" height=".9" fill="#d8343a"/>
+    <rect y="11.3" width="18" height="6.7" fill="#1f9f50"/>
+    <circle cx="3.5" cy="2.9" r="1.4" fill="#fff"/>
+    <circle cx="4.05" cy="2.9" r="1.15" fill="#19a6e2"/>
+    <circle cx="6.3" cy="2.1" r=".23" fill="#fff"/>
+    <circle cx="7.3" cy="2.6" r=".23" fill="#fff"/>
+    <circle cx="8.2" cy="2.1" r=".23" fill="#fff"/>
+    <circle cx="6.1" cy="3.3" r=".23" fill="#fff"/>
+    <circle cx="7.1" cy="3.8" r=".23" fill="#fff"/>
+    <circle cx="8.1" cy="3.3" r=".23" fill="#fff"/>
+    <circle cx="6.9" cy="4.9" r=".23" fill="#fff"/>
+    <circle cx="7.9" cy="4.4" r=".23" fill="#fff"/>
+    <circle cx="8.9" cy="4.9" r=".23" fill="#fff"/>
+    <circle cx="9.9" cy="4.4" r=".23" fill="#fff"/>
+    <circle cx="11" cy="4.9" r=".23" fill="#fff"/>
+  </g>
+</svg>
