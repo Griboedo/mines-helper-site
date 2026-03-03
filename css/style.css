@@ -163,6 +163,44 @@ img {
   flex-shrink: 0;
 }
 
+.header-play-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 208, 90, 0.95);
+  background: linear-gradient(135deg, #ffe36a 0%, #ffb627 46%, #ff8c00 100%);
+  color: #22110a;
+  font-family: "Unbounded", "Manrope", "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.16) inset,
+    0 10px 26px rgba(255, 140, 0, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.header-play-btn:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.08);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    0 14px 30px rgba(255, 140, 0, 0.52);
+}
+
+.header-play-btn:active {
+  transform: translateY(0);
+}
+
+.header-play-btn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
+}
+
 /* Переключатель языка */
 
 .lang-switcher {
@@ -738,6 +776,10 @@ img {
     border-bottom: none;
     padding: 0;
     gap: 16px;
+  }
+
+  .header-play-btn {
+    display: inline-flex;
   }
 
   .burger {
@@ -1764,6 +1806,24 @@ h3,
   object-position: center;
 }
 
+[data-page-slug="reviews"] .site-main > .section:nth-child(2) .container,
+[data-page-slug="reviews"] .site-main > .section:nth-child(3) .container {
+  display: block;
+}
+
+[data-page-slug="reviews"] .site-main > .section:nth-child(3) .inline-media-strip {
+  height: auto;
+  min-height: 0;
+  margin: 0 0 16px;
+  align-self: stretch;
+}
+
+[data-page-slug="reviews"] .site-main > .section:nth-child(3) .inline-media-strip img {
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
 .site-main > .section:nth-child(3) .container {
   grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
 }
@@ -1866,6 +1926,44 @@ h3,
 .review-card figcaption,
 .slide-caption {
   color: #a9b7d4;
+}
+
+.promo-code-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+  padding: 0 2px;
+  border: 0;
+  background: none;
+  color: #ffb627;
+  font: inherit;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  background-image: linear-gradient(135deg, #ffe36a 0%, #ffb627 46%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.25);
+  transition: filter 0.2s ease, text-shadow 0.2s ease;
+}
+
+.promo-code-copy:hover {
+  filter: saturate(1.1);
+  text-shadow: 0 0 14px rgba(255, 140, 0, 0.4);
+}
+
+.promo-code-copy:focus-visible {
+  outline: 2px solid rgba(255, 182, 39, 0.8);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.promo-code-copy.is-copied {
+  text-shadow: 0 0 16px rgba(255, 227, 106, 0.5);
 }
 
 .step-card h3::before,

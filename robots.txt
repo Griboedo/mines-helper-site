@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /author/
+Disallow: /page/
+Disallow: /20*/
+Disallow: /*?author=
 
 Sitemap: https://minesbot.net/sitemap.xml

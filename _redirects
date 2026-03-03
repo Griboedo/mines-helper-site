@@ -1,0 +1,9 @@
+# Suppress common WordPress scanner routes on a static site
+/wp-admin/* / 301
+/wp-login.php / 301
+
+# Prevent duplicate-like archive routes
+/author/* / 301
+/page/* / 301
+/20*/* / 301
+/20*/*/* / 301
