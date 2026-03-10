@@ -584,6 +584,13 @@ img {
    КАРТОЧКИ И СЕТКИ
    ============== */
 
+.section-intro {
+  max-width: 720px;
+  margin-bottom: 24px;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
 .steps-grid {
   display: grid;
   grid-template-columns: 1fr;
